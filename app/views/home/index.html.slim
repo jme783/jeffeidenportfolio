@@ -1,5 +1,18 @@
-div.background-container.dk-gray.top-shelf
+section.background-container.dk-gray.top-shelf
   div.row
-    div.large-12
+    div.large-12.columns
       h2 Hi There, Welcome to Jeff's Portfolio!
       p Just testing paragraphs here
+section.background-container.charcoal-gray.testimonials
+  div.row
+    div.large-12.columns
+      h3.section-header.uppercase Testimonials
+  - @testimonials.each do |testimonial|
+    div.row.testimonial
+      div.small-3.medium-2.columns
+        img src="#{testimonial.portrait}" class="author-img"
+      div.small-9.medium-10.columns.testimonial-content
+        span.quotation-mark &ldquo;
+        h4.testimonial_body #{testimonial.blurb_text}
+        div.who_said.subtle-text
+          p.uppercase #{testimonial.author_name},&nbsp;#{testimonial.author_position} at&nbsp;#{testimonial.author_company}

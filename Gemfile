@@ -32,6 +32,10 @@ gem 'slim'
 #Other Gems
 gem 'jquery-turbolinks'
 
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
+gem 'ransack',     github: 'activerecord-hackery/ransack'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 

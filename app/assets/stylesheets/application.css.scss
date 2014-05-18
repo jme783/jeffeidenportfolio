@@ -1,11 +1,23 @@
 @import "foundation_and_overrides";
+@import "home";
 body {
   color: #c8c8c8;
 }
 
 .background-container {
   width: 100%;
+  padding: 66px 0;
 }
 .dk-gray {
   background: #232323;
+}
+.charcoal-gray {
+  background: #282828;
+}
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.subtle-text {
+  color: #8c8c8c;
 }

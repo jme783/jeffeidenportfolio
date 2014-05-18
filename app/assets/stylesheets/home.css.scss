@@ -1,0 +1,43 @@
+.testimonial {
+  margin-bottom: 5rem;
+}
+.who_said {
+  margin-top: 1rem;
+  p {
+    margin-bottom: 0;
+  }
+}
+h4.testimonial_body {
+  margin-top: -8px;
+  font-weight: 300;
+  z-index: 1;
+  position: relative;
+  text-indent: 50px;
+}
+.testimonials > :last-child {
+   margin-bottom: 0 !important; 
+}
+.section-header {
+  margin-top: 0;
+  margin-bottom: 66px;
+  border-bottom: 1px solid #323232;
+  padding-bottom: 10px;
+  font-weight: 300;
+  &.uppercase {
+    letter-spacing: 3px;
+  }
+}
+.quotation-mark {
+  font-size: 8rem;
+  font-family: sans-serif;
+  color: #323232;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  line-height: 4rem;
+  padding-left: 0.7375rem;
+}
+.testimonial-content {
+  position: relative;
+}
