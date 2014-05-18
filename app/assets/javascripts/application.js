@@ -14,6 +14,10 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
+//= require responsive-nav
+//= require fastclick
+//= require scroll
+//= require fixed-responsive-nav
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
