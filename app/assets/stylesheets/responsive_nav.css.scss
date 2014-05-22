@@ -101,6 +101,7 @@ header {
   width: 100%;
   left: 0;
   top: 0;
+  background: #1e1e1e;
 }
 
 .logo {
@@ -196,22 +197,26 @@ header {
 
 .nav-collapse a {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  border-top: 1px solid white;
+  border-top: 1px solid #c8c8c8;
   text-decoration: none;
   padding: 0.7em 1em;
-  color: #fff;
+  color: #c8c8c8;
   width: 100%;
   float: left;
+  font-weight: 300;
+}
+.nav-collapse a:hover {
+  color: $primary-color;
 }
 
 .nav-collapse a:active,
 .nav-collapse .active a {
-  background: #b73214;
+  color: #f5f5f5;
+  border-bottom: 3px solid $primary-color;
 }
 
 @media screen and (min-width: 40em) {
   .nav-collapse a {
-    border-left: 1px solid white;
     padding: 1.02em 2em;
     text-align: center;
     border-top: 0;
@@ -251,7 +256,7 @@ header {
 }
 
 .nav-toggle:before {
-  color: #fff; /* Edit this to change the icon color */
+  color: #c8c8c8; /* Edit this to change the icon color */
   font: normal 28px/55px "responsivenav"; /* Edit font-size (28px) to change the icon size */
   text-transform: none;
   text-align: center;
@@ -267,6 +272,7 @@ header {
 .nav-toggle.active:before {
   font-size: 24px;
   content: "\78"; /* Close icon */
+  font-family: sans-serif;
 }
 
 
