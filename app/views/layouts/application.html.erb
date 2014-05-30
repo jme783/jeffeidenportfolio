@@ -8,12 +8,16 @@
     <title><%= content_for?(:title) ? yield(:title) : "Portfolio | Jeff Eiden" %></title>
 
     <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "jquery" %>
+    <%= javascript_include_tag "jquery_ujs" %>
+    <%= javascript_include_tag "home" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
     <%= yield %>
+    <%= content_for :page_js %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>
