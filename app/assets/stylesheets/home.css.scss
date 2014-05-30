@@ -1,3 +1,39 @@
+.dry-erase-images {
+  position: absolute;
+}
+.chattermap-dry-erase {
+  bottom: 4%;
+  right: 3%;
+  width: 400px;
+}
+.flow-dry-erase {
+  bottom: 14%;
+  left: 11%;
+  width: 550px;
+}
+.ab-dry-erase {
+  top: 16%;
+  right: 4%;
+  width: 240px;
+}
+.share-dry-erase {
+  top: 11%;
+  left: 3%;
+  width: 280px;
+}
+.hero-text {
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  color: #1e1e1e;
+  margin-top: 26%;
+  text-shadow: 0 -1px 1px rgba(255,255,255,0.6)
+}
+.top-shelf {
+  background: url('dry-erase-bckd.jpg');
+  background-size: cover;
+  min-height: 740px;
+  position: relative;
+}
 .testimonial {
   margin-bottom: 5rem;
 }

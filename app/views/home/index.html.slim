@@ -10,10 +10,17 @@ header
             a.uppercase href="#skills" data-scroll="" Skills
           li
             a.uppercase href="#testimonials" data-scroll="" Testimonials
-section.background-container.dk-gray.top-shelf
+section.background-container.top-shelf
   div.row
     div.large-12.columns
-      h2.text-center What can we build together?
+      h2.text-center.hero-text 
+        |What can we&nbsp;
+        strong
+          |build together?
+  = image_tag("dry-erase-chattermap.png", class: "dry-erase-images chattermap-dry-erase")
+  = image_tag("dry-erase-share.png", class: "dry-erase-images share-dry-erase")
+  = image_tag("dry-erase-flow.png", class: "dry-erase-images flow-dry-erase")
+  = image_tag("dry-erase-a-b.png", class: "dry-erase-images ab-dry-erase")
 section.background-container.charcoal-gray.projects#projects
 section.background-container.dk-gray.skills#skills
 section.background-container.charcoal-gray.testimonials#testimonials
@@ -29,3 +36,16 @@ section.background-container.charcoal-gray.testimonials#testimonials
         h4.testimonial_body #{testimonial.blurb_text}
         div.who_said.subtle-text
           p.uppercase #{testimonial.author_name},&nbsp;#{testimonial.author_position} at&nbsp;#{testimonial.author_company}
+- content_for :page_js do
+  javascript:
+    (function($, homePage){
+      $(document).ready(function(){
+        new homePage({
+          dryEraseImgs: $(".dry-erase-images"),
+          topSection: $(".top-shelf"),
+          window: $(window)
+        }).bind();
+      })
+    })(jQuery, JeffPortfolio.homePage.New)
+
+
