@@ -1,14 +1,47 @@
+.top_shelf_mask {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  z-index: 1000;
+  &:before, &:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 0;
+    border-bottom: 20px solid #282828;
+    width: 50%;
+  }
+  &:before {
+    border-left: 0;
+    border-right: 20px solid transparent;
+    left: 0;
+  }
+  &:after {
+    right: 0;
+    border-right: 0;
+    border-left: 20px solid transparent;
+  }
+}
 .dry-erase-images {
   position: absolute;
+  visibility: hidden;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -ms-animation-delay: 0.3s; 
+  -o-animation-delay: 0.3s;
+  -animation-end: 0.3s;  
 }
 .chattermap-dry-erase {
-  bottom: 4%;
+  bottom: 5%;
   right: 3%;
   width: 400px;
 }
 .flow-dry-erase {
   bottom: 14%;
-  left: 11%;
+  left: 5%;
   width: 550px;
 }
 .ab-dry-erase {
@@ -25,14 +58,15 @@
   font-size: 3.5rem;
   letter-spacing: 3px;
   color: #1e1e1e;
-  margin-top: 26%;
+  margin-top: 27%;
   text-shadow: 0 -1px 1px rgba(255,255,255,0.6)
 }
-.top-shelf {
+.top-shelf.background-container {
   background: url('dry-erase-bckd.jpg');
   background-size: cover;
-  min-height: 740px;
   position: relative;
+  padding: 66px 0 0;
+  overflow: hidden;
 }
 .testimonial {
   margin-bottom: 5rem;
@@ -76,4 +110,41 @@ h4.testimonial_body {
 }
 .testimonial-content {
   position: relative;
+}
+@media #{$medium-only} {
+  .share-dry-erase {
+    width: 220px;
+  }
+  .ab-dry-erase {
+    width: 230px;
+  }
+  .flow-dry-erase {
+    width: 360px;
+    bottom: 22%;
+    left: 3%;
+  }
+  .chattermap-dry-erase {
+    width: 300px;
+  }
+  .hero-text {
+    margin-top: 275px;
+    font-size: 2.5rem;
+  }
+
+}
+@media #{$small-only} {
+  .hero-text {
+    margin-top: 0;
+    font-size: 1.6875rem;
+    letter-spacing: 1px;
+  }
+  .dry-erase-images.share-dry-erase {
+    display: block !important;
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 24px auto 0;
+    width: 85%;
+    max-height: 300px
+  }
 }

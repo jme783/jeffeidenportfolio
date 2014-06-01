@@ -4,14 +4,33 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
   New = (opts)->
     this.dryEraseImgs = opts.dryEraseImgs
     this.topSection = opts.topSection
-    this.window = opts.window
+    this.shareDryEraseImg = opts.shareDryEraseImg
+    this.flowDryEraseImg = opts.flowDryEraseImg
+    this.abDryEraseImg = opts.abDryEraseImg
+    this.chattermapDryEraseImg = opts.chattermapDryEraseImg
+    return this
   homePage.New = New
 
   New::bind = ->
-    this.bindScroll()
+    this.bindPageLoad()
+    this.bindWindowResize()
 
-  New::bindScroll = ->
+  New::bindPageLoad = ->
     self = this
-    self.window.scroll ->
-      alert('hi')
+    self.resizeTopShelf()
+    self.shareDryEraseImg.css('visibility', 'visible').addClass('animated fadeInLeft')
+    self.chattermapDryEraseImg.css('visibility', 'visible').addClass('animated fadeInRight')
+    self.flowDryEraseImg.css('visibility', 'visible').addClass('animated fadeInLeft')
+    self.abDryEraseImg.css('visibility', 'visible').addClass('animated fadeInRight')
+
+  New::bindWindowResize = ->
+    self = this
+    $(window).resize ->
+      self.resizeTopShelf()
+  New::resizeTopShelf = ->
+    self = this
+    vph = $(window).height()
+    self.topSection.css({'height':vph + 'px'})
+
+
 )(jQuery, JeffPortfolio.homePage)

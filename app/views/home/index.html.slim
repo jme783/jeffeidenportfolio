@@ -1,41 +1,43 @@
-header
-  div.row
-    div.large-12.columns
-      a href="#" class="logo" data-scroll="" Jeff Eiden
-      nav class="nav-collapse"
-        ul
-          li
-            a.uppercase href="#projects" data-scroll="" Projects
-          li
-            a.uppercase href="#skills" data-scroll="" Skills
-          li
-            a.uppercase href="#testimonials" data-scroll="" Testimonials
-section.background-container.top-shelf
-  div.row
-    div.large-12.columns
-      h2.text-center.hero-text 
-        |What can we&nbsp;
-        strong
-          |build together?
-  = image_tag("dry-erase-chattermap.png", class: "dry-erase-images chattermap-dry-erase")
-  = image_tag("dry-erase-share.png", class: "dry-erase-images share-dry-erase")
-  = image_tag("dry-erase-flow.png", class: "dry-erase-images flow-dry-erase")
-  = image_tag("dry-erase-a-b.png", class: "dry-erase-images ab-dry-erase")
-section.background-container.charcoal-gray.projects#projects
-section.background-container.dk-gray.skills#skills
-section.background-container.charcoal-gray.testimonials#testimonials
-  div.row
-    div.large-12.columns
-      h3.section-header.uppercase Testimonials
-  - @testimonials.each do |testimonial|
-    div.row.testimonial
-      div.small-3.medium-2.columns
-        img src="#{testimonial.portrait}" class="author-img"
-      div.small-9.medium-10.columns.testimonial-content
-        span.quotation-mark &ldquo;
-        h4.testimonial_body #{testimonial.blurb_text}
-        div.who_said.subtle-text
-          p.uppercase #{testimonial.author_name},&nbsp;#{testimonial.author_position} at&nbsp;#{testimonial.author_company}
+section
+  header
+    div.row
+      div.large-12.columns
+        a href="#" class="logo" data-scroll="" Jeff Eiden
+        nav class="nav-collapse"
+          ul
+            li
+              a.uppercase href="#projects" data-scroll="" Projects
+            li
+              a.uppercase href="#skills" data-scroll="" Skills
+            li
+              a.uppercase href="#testimonials" data-scroll="" Testimonials
+  section.background-container.top-shelf 
+    div.row
+      div.large-12.columns
+        h2.text-center.hero-text data-0="opacity: 1" data-300="opacity: 0"
+          |What can we&nbsp;
+          strong
+            |build together?
+    = image_tag("dry-erase-chattermap.png", :class => "dry-erase-images chattermap-dry-erase show-for-medium-up")
+    = image_tag("dry-erase-share.png", class: "dry-erase-images share-dry-erase show-for-medium-up")
+    = image_tag("dry-erase-flow.png", class: "dry-erase-images flow-dry-erase show-for-medium-up")
+    = image_tag("dry-erase-a-b.png", class: "dry-erase-images ab-dry-erase show-for-medium-up")
+    div.top_shelf_mask
+  section.background-container.charcoal-gray.projects#projects
+  section.background-container.dk-gray.skills#skills
+  section.background-container.charcoal-gray.testimonials#testimonials
+    div.row
+      div.large-12.columns
+        h3.section-header.uppercase Testimonials
+    - @testimonials.each do |testimonial|
+      div.row.testimonial
+        div.small-3.medium-2.columns
+          img src="#{testimonial.portrait}" class="author-img"
+        div.small-9.medium-10.columns.testimonial-content
+          span.quotation-mark &ldquo;
+          h4.testimonial_body #{testimonial.blurb_text}
+          div.who_said.subtle-text
+            p.uppercase #{testimonial.author_name},&nbsp;#{testimonial.author_position} at&nbsp;#{testimonial.author_company}
 - content_for :page_js do
   javascript:
     (function($, homePage){
@@ -43,9 +45,13 @@ section.background-container.charcoal-gray.testimonials#testimonials
         new homePage({
           dryEraseImgs: $(".dry-erase-images"),
           topSection: $(".top-shelf"),
-          window: $(window)
+          shareDryEraseImg: $(".share-dry-erase"),
+          flowDryEraseImg: $(".flow-dry-erase"),
+          abDryEraseImg: $(".ab-dry-erase"),
+          chattermapDryEraseImg: $(".chattermap-dry-erase")
         }).bind();
       })
     })(jQuery, JeffPortfolio.homePage.New)
+
 
 
