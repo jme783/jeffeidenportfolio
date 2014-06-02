@@ -4,7 +4,6 @@
   left: 0;
   width: 100%;
   height: 20px;
-  z-index: 1000;
   &:before, &:after {
     content: ' ';
     display: block;
@@ -145,6 +144,5 @@ h4.testimonial_body {
     left: auto;
     margin: 24px auto 0;
     width: 85%;
-    max-height: 300px
   }
 }

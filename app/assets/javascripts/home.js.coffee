@@ -14,6 +14,8 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
   New::bind = ->
     this.bindPageLoad()
     this.bindWindowResize()
+    this.bindTopShelfScroll()
+    return this
 
   New::bindPageLoad = ->
     self = this
@@ -27,6 +29,15 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
     self = this
     $(window).resize ->
       self.resizeTopShelf()
+
+  New::bindTopShelfScroll = ->
+    self = this
+    $(window).bind "scroll", ->
+       if $(window).scrollTop() >= self.topSection.innerHeight() - 20
+         $("header").addClass("below-shelf")
+       else
+         $("header").removeClass("below-shelf")
+
   New::resizeTopShelf = ->
     self = this
     vph = $(window).height()

@@ -41,7 +41,6 @@ section
 - content_for :page_js do
   javascript:
     (function($, homePage){
-      $(document).ready(function(){
         new homePage({
           dryEraseImgs: $(".dry-erase-images"),
           topSection: $(".top-shelf"),
@@ -50,7 +49,6 @@ section
           abDryEraseImg: $(".ab-dry-erase"),
           chattermapDryEraseImg: $(".chattermap-dry-erase")
         }).bind();
-      })
     })(jQuery, JeffPortfolio.homePage.New)
 
 
