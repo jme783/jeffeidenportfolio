@@ -4,6 +4,7 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
   New = (opts)->
     this.dryEraseImgs = opts.dryEraseImgs
     this.topSection = opts.topSection
+    this.heroText = opts.heroText
     this.shareDryEraseImg = opts.shareDryEraseImg
     this.flowDryEraseImg = opts.flowDryEraseImg
     this.abDryEraseImg = opts.abDryEraseImg
@@ -20,11 +21,13 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
   New::bindPageLoad = ->
     self = this
     self.resizeTopShelf()
-    self.shareDryEraseImg.css('visibility', 'visible').addClass('animated fadeInLeft')
-    self.chattermapDryEraseImg.css('visibility', 'visible').addClass('animated fadeInRight')
-    self.flowDryEraseImg.css('visibility', 'visible').addClass('animated fadeInLeft')
-    self.abDryEraseImg.css('visibility', 'visible').addClass('animated fadeInRight')
-
+    setTimeout (->
+      self.executeFadeAnimation self.shareDryEraseImg, "Left"
+      return
+    ), 500
+    self.shareDryEraseImg.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', () -> self.executeFadeAnimation(self.chattermapDryEraseImg, 'Right'))
+    self.chattermapDryEraseImg.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', () -> self.executeFadeAnimation(self.flowDryEraseImg, 'Left'))
+    self.flowDryEraseImg.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', () -> self.executeFadeAnimation(self.abDryEraseImg, 'Right'))
   New::bindWindowResize = ->
     self = this
     $(window).resize ->
@@ -33,15 +36,20 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
   New::bindTopShelfScroll = ->
     self = this
     $(window).bind "scroll", ->
-       if $(window).scrollTop() >= self.topSection.innerHeight() - 20
+       if $(window).scrollTop() >= self.topSection.innerHeight() - 60
          $("header").addClass("below-shelf")
        else
          $("header").removeClass("below-shelf")
-
+       self.heroText.css({'opacity':( 300-$(window).scrollTop() )/100})
   New::resizeTopShelf = ->
     self = this
     vph = $(window).height()
     self.topSection.css({'height':vph + 'px'})
+
+  New::executeFadeAnimation  = (element, direction) ->
+    self = this
+    element.css('visibility','visible')
+    element.addClass('animated fadeIn'+direction)
 
 
 )(jQuery, JeffPortfolio.homePage)

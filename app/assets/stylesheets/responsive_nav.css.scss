@@ -96,7 +96,7 @@ a:hover {
 --------------------------------------------- */
 
 header {
-  position: fixed;
+  position: absolute;
   z-index: 3;
   width: 100%;
   left: 0;
@@ -217,7 +217,7 @@ header {
 
 @media screen and (min-width: 40em) {
   .nav-collapse a {
-    padding: 1.02em 2em;
+    padding: 1.02em 1em;
     text-align: center;
     border-top: 0;
     float: left;
@@ -275,6 +275,15 @@ header {
   font-family: sans-serif;
 }
 
-
+/* Below Shelf Naviation Styles */
+header.below-shelf {
+  display: block;
+  background: #1e1e1e;
+  border-bottom: 1px solid #323232;
+  position: fixed;
+  .nav-collapse a:active, .nav-collapse .active a {
+    color: #c8c8c8;
+  }
+}
 
 
