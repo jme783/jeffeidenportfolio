@@ -6,6 +6,8 @@ section
         nav class="nav-collapse"
           ul
             li
+              a.uppercase href="#about" data-scroll="" About
+            li
               a.uppercase href="#projects" data-scroll="" Projects
             li
               a.uppercase href="#skills" data-scroll="" Skills
@@ -23,6 +25,13 @@ section
     = image_tag("dry-erase-flow.png", class: "dry-erase-images flow-dry-erase show-for-medium-up")
     = image_tag("dry-erase-a-b.png", class: "dry-erase-images ab-dry-erase show-for-medium-up")
     div.top_shelf_mask
+  section.background-container.charcoal-gray.about#about
+    div.row
+      div.large-12.columns
+        h3.section-header.uppercase About Jeff
+    div.row
+      div.large-4.medium-6.columns
+        = image_tag("jeff_eiden_portrait.jpg", :class => "portrait-photo")
   section.background-container.charcoal-gray.projects#projects
   section.background-container.dk-gray.skills#skills
   section.background-container.charcoal-gray.testimonials#testimonials
