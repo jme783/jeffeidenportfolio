@@ -20,7 +20,6 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
 
   New::bindPageLoad = ->
     self = this
-    self.resizeTopShelf()
     setTimeout (->
       self.executeFadeAnimation self.shareDryEraseImg, "Left"
       return
@@ -30,8 +29,6 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
     self.flowDryEraseImg.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', () -> self.executeFadeAnimation(self.abDryEraseImg, 'Right'))
   New::bindWindowResize = ->
     self = this
-    $(window).resize ->
-      self.resizeTopShelf()
 
   New::bindTopShelfScroll = ->
     self = this
@@ -44,7 +41,9 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
   New::resizeTopShelf = ->
     self = this
     vph = $(window).height()
-    self.topSection.css({'height':vph + 'px'})
+    vpw = $(window).width()
+    if vpw >= 640
+      self.topSection.css({'height':vph + 'px'})
 
   New::executeFadeAnimation  = (element, direction) ->
     self = this

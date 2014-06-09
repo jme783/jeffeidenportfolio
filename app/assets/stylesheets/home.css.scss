@@ -126,18 +126,30 @@ h4.testimonial_body {
   }
 
 }
+@media #{$medium-up} {
+  .top-shelf.background-container {
+    min-height: 745px;
+  }
+}
 @media #{$small-only} {
   .hero-text {
     margin-top: 0;
     font-size: 1.6875rem;
     letter-spacing: 1px;
+    line-height: 2rem;
+    strong {
+      display: block;
+    }
   }
   .dry-erase-images.share-dry-erase {
     display: block !important;
     position: relative;
     top: auto;
     left: auto;
-    margin: 24px auto 0;
-    width: 85%;
+    margin: 25px auto 50px;
+    width: 220px;
+  }
+  .top-shelf.background-container {
+    min-height: 400px;
   }
 }

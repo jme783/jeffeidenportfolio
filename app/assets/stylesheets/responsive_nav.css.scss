@@ -109,9 +109,23 @@ header {
   text-decoration: none;
   font-weight: bold;
   line-height: 55px;
-  padding: 0 20px;
+  padding: 0;
   color: #fff;
   float: left;
+  background: url("jme_logo_light.png");
+  background-size: 100%;
+  background-position: 0 14px;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 58px;
+}
+header.below-shelf {
+  .logo {
+    background-image: url("jme_logo_dark.png");
+  }
+  .nav-collapse a:hover, .nav-collapse a.active {
+    color: #c8c8c8;
+  }
 }
 
 
@@ -212,14 +226,14 @@ header {
 .nav-collapse a:active,
 .nav-collapse .active a {
   color: #1e1e1e;
-  border-bottom: 3px solid $primary-color;
+  border-top: 3px solid $primary-color;
 }
 
 @media screen and (min-width: 40em) {
   .nav-collapse a {
+    border-top: 3px solid transparent;
     padding: 1.02em 1em;
     text-align: center;
-    border-top: 0;
     float: left;
     margin: 0;
   }
@@ -286,4 +300,9 @@ header.below-shelf {
   }
 }
 
-
+@media #{$small-only} {
+  .logo {
+    width: 120px;
+    background-position: 0 16px;
+  }
+}
