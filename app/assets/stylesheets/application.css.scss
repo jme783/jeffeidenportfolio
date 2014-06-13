@@ -19,7 +19,22 @@ body {
 .uppercase {
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: normal;
 }
 .subtle-text {
   color: #8c8c8c;
+}
+ul, ol, dl {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.accordion dd > a {
+  border: 2px solid #8c8c8c;
+  margin-top: 1rem;
+  text-align: center;
+}
+@media #{$medium-up} {
+  .remove-top-space {
+    margin-top: -8px;
+  }
 }

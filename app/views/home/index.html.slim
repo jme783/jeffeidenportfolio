@@ -2,18 +2,18 @@ section
   header
     div.row
       div.large-12.columns
-        a href="#" class="logo" data-scroll="" 
+        a href="#" class="logo"
         nav class="nav-collapse"
           ul
             li
-              a.uppercase href="#about" data-scroll="" About
-            li
-              a.uppercase href="#projects" data-scroll="" Projects
+              a.uppercase href="#about" data-scroll="" Me
             li
               a.uppercase href="#skills" data-scroll="" Skills
             li
-              a.uppercase href="#testimonials" data-scroll="" Testimonials
-  section.background-container.top-shelf 
+              a.uppercase href="#projects" data-scroll="" Projects
+            li
+              a.uppercase.last-nav-element href="#testimonials" data-scroll="" Testimonials
+  section.background-container.top-shelf
     div.row
       div.large-12.columns
         h2.text-center.hero-text data-0="opacity: 1" data-300="opacity: 0"
@@ -25,15 +25,32 @@ section
     = image_tag("dry-erase-flow.png", class: "dry-erase-images flow-dry-erase show-for-medium-up")
     = image_tag("dry-erase-a-b.png", class: "dry-erase-images ab-dry-erase show-for-medium-up")
     div.top_shelf_mask
-  section.background-container.charcoal-gray.about#about
+  section.background-container.dk-gray.about#about
+    div.row
+      div.large-3.medium-4.columns
+        = image_tag("jeff_eiden_portrait.jpg", :class => "portrait-photo")
+      div.large-9.medium-8.columns.about-text
+        p.remove-top-space
+          span#wcwb.subtle-text.uppercase What can we build together?
+          |That's the question I pose to you, my future teammates, advisors, partners, and clients. I'm Jeff Eiden, and I strive to create things with web technology that improve the quality of our lives. The web has provided me a canvas to express myself and the opportunity to make a meaningful, positive impact. I welcome any and all opportunities to collaborate on projects with driven and talented teams working towards something special! 
+  section.background-container.charcoal-gray.skills#skills
     div.row
       div.large-12.columns
-        h3.section-header.uppercase About Jeff
+        h3.section-header.uppercase Skills
     div.row
-      div.large-4.medium-6.columns
-        = image_tag("jeff_eiden_portrait.jpg", :class => "portrait-photo")
-  section.background-container.charcoal-gray.projects#projects
-  section.background-container.dk-gray.skills#skills
+      - @skills.each do |skill|
+        div.medium-3.columns.skill
+          = image_tag("#{skill.image}", :class => "ninja-skills")
+          p.uppercase.text-center.skill-title #{skill.name}
+          dl.accordion data-accordion=""
+            dd
+              a href="#skill-#{skill.id}" Known Technologies
+              div id="skill-#{skill.id}" class="content"
+                p hi
+  section.background-container.dk-gray.projects#projects
+    div.row
+      div.large-12.columns
+        h3.section-header.uppercase Projects
   section.background-container.charcoal-gray.testimonials#testimonials
     div.row
       div.large-12.columns

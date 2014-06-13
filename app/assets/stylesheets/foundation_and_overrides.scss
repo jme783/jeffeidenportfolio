@@ -148,9 +148,9 @@ $header-line-height: 1.6;
 
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
-// $paragraph-font-weight: normal;
-// $paragraph-font-size: 1rem;
-// $paragraph-line-height: 1.6;
+$paragraph-font-weight: 300;
+$paragraph-font-size: 1.1rem;
+//$paragraph-line-height: 1.8;
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
 // $paragraph-aside-line-height: 1.35;
@@ -221,11 +221,11 @@ $hr-border-color: #323232;
 
 // $include-html-accordion-classes: $include-html-classes;
 
-// $accordion-navigation-padding: rem-calc(16);
-// $accordion-navigation-bg-color: #efefef  ;
+$accordion-navigation-padding: rem-calc(8);
+$accordion-navigation-bg-color: rgba(0,0,0,0);
 // $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
 // $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%);
-// $accordion-navigation-font-color: #222;
+$accordion-navigation-font-color: #8c8c8c;
 // $accordion-navigation-font-size: rem-calc(16);
 // $accordion-navigation-font-family: $body-font-family;
 

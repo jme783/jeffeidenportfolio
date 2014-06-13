@@ -1,3 +1,16 @@
+.skill-description {
+  margin-bottom: 2rem;
+}
+.skill-title {
+  margin-top: 1rem;
+}
+#wcwb {
+  display: block;
+}
+.ninja-skills {
+  display: block;
+  margin: 0 auto;
+}
 .top_shelf_mask {
   position: absolute;
   bottom: 0;
@@ -10,7 +23,7 @@
     position: absolute;
     top: 0;
     height: 0;
-    border-bottom: 20px solid #282828;
+    border-bottom: 20px solid #232323;
     width: 50%;
   }
   &:before {
@@ -89,6 +102,7 @@ h4.testimonial_body {
   font-weight: 300;
   &.uppercase {
     letter-spacing: 3px;
+    font-weight: 300;
   }
 }
 .quotation-mark {
@@ -151,5 +165,11 @@ h4.testimonial_body {
   }
   .top-shelf.background-container {
     min-height: 400px;
+  }
+  .section-header {
+    margin-bottom: 25px;
+  }
+  .skill {
+    margin-bottom: 2rem;
   }
 }

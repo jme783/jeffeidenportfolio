@@ -114,7 +114,7 @@ header {
   float: left;
   background: url("jme_logo_light.png");
   background-size: 100%;
-  background-position: 0 14px;
+  background-position: -4px 14px;
   background-repeat: no-repeat;
   width: 150px;
   height: 58px;
@@ -236,6 +236,9 @@ header.below-shelf {
     text-align: center;
     float: left;
     margin: 0;
+    &.last-nav-element {
+      padding-right: 0;
+    }
   }
 }
 
