@@ -23,7 +23,7 @@
     position: absolute;
     top: 0;
     height: 0;
-    border-bottom: 20px solid #232323;
+    border-bottom: 20px solid $dark-gray;
     width: 50%;
   }
   &:before {
@@ -64,9 +64,8 @@
 .hero-text {
   font-size: 3.5rem;
   letter-spacing: 3px;
-  color: #1e1e1e;
+  color: $black;
   margin-top: 250px;
-  text-shadow: 0 -1px 1px rgba(255,255,255,0.6)
 }
 .top-shelf.background-container {
   background: url('dry-erase-bckd.jpg');
@@ -97,7 +96,7 @@ h4.testimonial_body {
 .section-header {
   margin-top: 0;
   margin-bottom: 66px;
-  border-bottom: 1px solid #323232;
+  border-bottom: 1px solid $faint-gray;
   padding-bottom: 10px;
   font-weight: 300;
   &.uppercase {
@@ -108,7 +107,7 @@ h4.testimonial_body {
 .quotation-mark {
   font-size: 8rem;
   font-family: sans-serif;
-  color: #323232;
+  color: $faint-gray;
   position: absolute;
   top: 0;
   left: 0;

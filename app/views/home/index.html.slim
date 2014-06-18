@@ -44,9 +44,10 @@ section
           p.uppercase.text-center.skill-title #{skill.name}
           dl.accordion data-accordion=""
             dd
-              a href="#skill-#{skill.id}" Known Technologies
+              a href="#skill-#{skill.id}" Expand Skills
               div id="skill-#{skill.id}" class="content"
-                p hi
+                - skill.known_technologies.each do |known_technology|
+                  p = known_technology.name
   section.background-container.dk-gray.projects#projects
     div.row
       div.large-12.columns
@@ -74,7 +75,8 @@ section
           shareDryEraseImg: $(".share-dry-erase"),
           flowDryEraseImg: $(".flow-dry-erase"),
           abDryEraseImg: $(".ab-dry-erase"),
-          chattermapDryEraseImg: $(".chattermap-dry-erase")
+          chattermapDryEraseImg: $(".chattermap-dry-erase"),
+          accordion: $("dl.accordion")
         }).bind();
     })(jQuery, JeffPortfolio.homePage.New)
 

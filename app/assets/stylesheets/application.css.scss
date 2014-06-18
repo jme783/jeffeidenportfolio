@@ -3,7 +3,7 @@
 @import "responsive_nav";
 @import "animate";
 body {
-  color: #c8c8c8;
+  color: $cream;
 }
 
 .background-container {
@@ -11,10 +11,10 @@ body {
   padding: 66px 0;
 }
 .dk-gray {
-  background: #232323;
+  background: $dark-gray;
 }
 .charcoal-gray {
-  background: #282828;
+  background: $charcoal-gray;
 }
 .uppercase {
   text-transform: uppercase;
@@ -22,17 +22,49 @@ body {
   font-weight: normal;
 }
 .subtle-text {
-  color: #8c8c8c;
+  color: $medium-gray;
 }
 ul, ol, dl {
   font-size: 1rem;
   line-height: 1.6;
 }
+.accordion dd {
+  position: relative;
+}
+
 .accordion dd > a {
-  border: 2px solid #8c8c8c;
+  border: 2px solid $medium-gray;
   margin-top: 1rem;
   text-align: center;
+  &:hover {
+    border: 2px solid $cream;
+    color: $cream;
+  }
 }
+.accordion dd.active {
+  a {
+    border-bottom: none;
+  }
+  .content.active {
+    background: rgba(0,0,0,0);
+    border: 2px solid $medium-gray;
+    border-top: none;
+  }
+}
+dd:before {
+  content: "+";
+  position: absolute;
+  right: 15px;
+  top: 9px;
+  color: $primary-color;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+dd.active:before {
+  content: "_";
+  top: 0;
+}
+
 @media #{$medium-up} {
   .remove-top-space {
     margin-top: -8px;

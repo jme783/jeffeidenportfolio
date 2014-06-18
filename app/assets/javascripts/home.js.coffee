@@ -9,6 +9,7 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
     this.flowDryEraseImg = opts.flowDryEraseImg
     this.abDryEraseImg = opts.abDryEraseImg
     this.chattermapDryEraseImg = opts.chattermapDryEraseImg
+    this.accordion = opts.accordion
     return this
   homePage.New = New
 
@@ -16,6 +17,7 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
     this.bindPageLoad()
     this.bindWindowResize()
     this.bindTopShelfScroll()
+    this.bindAccordionClick()
     return this
 
   New::bindPageLoad = ->
@@ -38,6 +40,15 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
        else
          $("header").removeClass("below-shelf")
        self.heroText.css({'opacity':( 300-$(window).scrollTop() )/100})
+
+  New::bindAccordionClick = ->
+    self = this
+    this.accordion.click ->
+      if $(this).find('dd').hasClass('active')
+        $(this).find('a').text('Expand Skills')
+      else
+        $(this).find('a').text('Collapse Skills')
+
   New::resizeTopShelf = ->
     self = this
     vph = $(window).height()
