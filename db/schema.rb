@@ -13,43 +13,46 @@
 
 ActiveRecord::Schema.define(version: 20140618125224) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_admin_comments", force: true do |t|
-    t.string   "namespace"
+    t.text     "namespace"
     t.text     "body"
-    t.string   "resource_id",   null: false
-    t.string   "resource_type", null: false
+    t.text     "resource_id",   null: false
+    t.text     "resource_type", null: false
     t.integer  "author_id"
-    t.string   "author_type"
+    t.text     "author_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
-  add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace"
-  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
+  add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
+  add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
+  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
   create_table "known_technologies", force: true do |t|
-    t.string   "name"
+    t.text     "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "skill_id"
   end
 
   create_table "skills", force: true do |t|
-    t.string   "name"
-    t.string   "image"
+    t.text     "name"
+    t.text     "image"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "testimonials", force: true do |t|
-    t.string   "author_name"
-    t.string   "author_company"
-    t.string   "author_position"
-    t.text     "blurb_text",      limit: 255
+    t.text     "author_name"
+    t.text     "author_company"
+    t.text     "author_position"
+    t.text     "blurb_text"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "portrait"
+    t.text     "portrait"
   end
 
 end
