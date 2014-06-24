@@ -1,3 +1,6 @@
+p.about_me {
+  font-size: 1.4375em;
+}
 .skill-description {
   margin-bottom: 2rem;
 }
@@ -165,10 +168,15 @@ h4.testimonial_body {
   .top-shelf.background-container {
     min-height: 400px;
   }
+
   .section-header {
     margin-bottom: 25px;
   }
   .skill {
     margin-bottom: 2rem;
+  }
+  .portrait-photo {
+    display: block;
+    margin: 0 auto 20px;
   }
 }

@@ -28,6 +28,11 @@ ul, ol, dl {
   font-size: 1rem;
   line-height: 1.6;
 }
+.accordion {
+  position: relative;
+  z-index: 1;
+}
+
 .accordion dd {
   position: relative;
 }
@@ -59,6 +64,7 @@ dd:before {
   color: $primary-color;
   font-weight: bold;
   font-size: 1.2em;
+  z-index: -1;
 }
 dd.active:before {
   content: "_";
@@ -68,5 +74,10 @@ dd.active:before {
 @media #{$medium-up} {
   .remove-top-space {
     margin-top: -8px;
+  }
+}
+@media #{$small-only} {
+  .background-container {
+    padding: 30px 0;
   }
 }
