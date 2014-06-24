@@ -10,6 +10,9 @@ module JeffEidenPortfolio
   class Application < Rails::Application
     config.i18n.enforce_available_locales = true
     config.assets.enabled = true
+    config.assets.precompile += %w( home.js )
+    config.assets.precompile += %w( jquery.js )
+    config.assets.precompile += %w( jquery_ujs.js )
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
