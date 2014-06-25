@@ -31,6 +31,7 @@ ul, ol, dl {
 .accordion {
   position: relative;
   z-index: 1;
+  margin-top: 1rem;
 }
 
 .accordion dd {
@@ -39,8 +40,8 @@ ul, ol, dl {
 
 .accordion dd > a {
   border: 2px solid $medium-gray;
-  margin-top: 1rem;
   text-align: center;
+  font-size: 1.1rem;
   &:hover {
     border: 2px solid $cream;
     color: $cream;
@@ -83,4 +84,8 @@ dd.active:before {
   p {
     font-size: 0.9rem;
   }
+  .accordion dd > a {
+    font-size: 0.9rem;
+  }
 }
+

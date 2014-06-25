@@ -148,6 +148,13 @@ h4.testimonial_body {
   }
 }
 @media #{$small-only} {
+  .skill .accordion {
+    max-width: 70%;
+    margin: 1rem auto 0;
+  }
+  .ninja-skills {
+    max-width: 35%;
+  }
   .hero-text {
     margin-top: 0;
     font-size: 1.6875rem;
@@ -173,7 +180,7 @@ h4.testimonial_body {
     margin-bottom: 25px;
   }
   .skill {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
   .portrait-photo {
     display: block;
@@ -193,6 +200,6 @@ h4.testimonial_body {
     }
   }
   p.about_me {
-    font-size: 1.125rem;
+    font-size: 0.9rem;
   }
 }

@@ -18,6 +18,7 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
     this.bindWindowResize()
     this.bindTopShelfScroll()
     this.bindAccordionClick()
+    this.bindAccordionHover()
     return this
 
   New::bindPageLoad = ->
@@ -49,6 +50,14 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
       else
         $(this).find('a').text('Collapse Skills')
 
+  New::bindAccordionHover = ->
+    self = this
+    this.accordion.find('a').mouseenter(->
+      $(this).parent().find('div.content').css('border','2px solid #c8c8c8').css('border-top', 'none')
+      return
+    ).mouseleave ->
+      $(this).parent().find('div.content').css('border','2px solid #8c8c8c').css('border-top', 'none')
+      return
   New::resizeTopShelf = ->
     self = this
     vph = $(window).height()
