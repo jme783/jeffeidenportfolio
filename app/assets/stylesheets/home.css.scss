@@ -121,6 +121,12 @@ h4.testimonial_body {
 .testimonial-content {
   position: relative;
 }
+.skill {
+  margin-bottom: 3rem;
+}
+@media #{$large-up} {
+  margin-bottom: 0;
+}
 @media #{$medium-only} {
   .share-dry-erase {
     width: 220px;
@@ -178,9 +184,6 @@ h4.testimonial_body {
 
   .section-header {
     margin-bottom: 25px;
-  }
-  .skill {
-    margin-bottom: 3rem;
   }
   .portrait-photo {
     display: block;

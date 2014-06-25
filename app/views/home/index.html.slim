@@ -39,7 +39,7 @@ section
         h3.section-header.uppercase Skills
     div.row
       - @skills.each do |skill|
-        div.medium-3.columns.skill
+        div.medium-6.large-3.columns.skill
           = image_tag("#{skill.image}", :class => "ninja-skills")
           p.uppercase.text-center.skill-title #{skill.name}
           dl.accordion data-accordion=""
