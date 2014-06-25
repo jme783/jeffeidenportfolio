@@ -27,7 +27,7 @@ section
     div.top_shelf_mask
   section.background-container.dk-gray.about#about
     div.row
-      div.large-3.medium-4.columns
+      div.large-3.medium-4.small-6.columns
         = image_tag("jeff_eiden_portrait.jpg", :class => "portrait-photo")
       div.large-9.medium-8.columns.about-text
         p.remove-top-space.about_me
@@ -58,9 +58,9 @@ section
         h3.section-header.uppercase Testimonials
     - @testimonials.each do |testimonial|
       div.row.testimonial
-        div.small-3.medium-2.columns
+        div.small-4.medium-2.columns
           img src="#{testimonial.portrait}" class="author-img"
-        div.small-9.medium-10.columns.testimonial-content
+        div.medium-10.columns.testimonial-content
           span.quotation-mark &ldquo;
           h4.testimonial_body #{testimonial.blurb_text}
           div.who_said.subtle-text

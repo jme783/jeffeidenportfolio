@@ -177,6 +177,22 @@ h4.testimonial_body {
   }
   .portrait-photo {
     display: block;
-    margin: 0 auto 20px;
+  }
+  .about-text, .testimonial-content {
+    float: none !important;
+  }
+  .testimonial {
+    margin-bottom: 3rem;
+  }
+  .testimonial-content {
+    h4 {
+      text-indent: 0;
+    }
+    .quotation-mark {
+      display: none;
+    }
+  }
+  p.about_me {
+    font-size: 1.125rem;
   }
 }
