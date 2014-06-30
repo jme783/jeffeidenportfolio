@@ -52,6 +52,14 @@ section
     div.row
       div.large-12.columns
         h3.section-header.uppercase Projects
+    div.row
+      - @projects.each do |project|
+        div.large-4.medium-6.columns
+          div.project
+            img.product_thumbnail src="http://placehold.it/325x250"
+            h5.project_name = project.name
+            p.project_summary
+              em = project.summary
   section.background-container.charcoal-gray.testimonials#testimonials
     div.row
       div.large-12.columns

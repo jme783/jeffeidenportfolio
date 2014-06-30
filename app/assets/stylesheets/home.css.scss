@@ -1,3 +1,23 @@
+/* PROJECTS */
+.project {
+  border: 2px solid $medium-gray;
+  margin-bottom: 3rem;
+  color: $medium-gray;
+  text-align: center;
+  padding: 20px;
+  &:hover {
+    cursor: pointer;
+    border: 2px solid $cream;
+    color: $cream;
+  }
+  .product_thumbnail {
+    margin-bottom: 1rem;
+    opacity: 0.4;
+  }
+  .project_summary {
+    font-weight: 300;
+  }
+}
 p.about_me {
   font-size: 1.4375em;
 }

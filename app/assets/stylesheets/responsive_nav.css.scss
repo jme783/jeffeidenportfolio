@@ -96,12 +96,13 @@ a:hover {
 --------------------------------------------- */
 
 header {
-  position: absolute;
+  position: fixed;
   z-index: 3;
   width: 100%;
   left: 0;
   top: 0;
-  background: transparent;
+  background: rgba(255,255,255,0.4);
+  border-bottom: 1px solid $cream;
 }
 
 .logo {
