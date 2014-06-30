@@ -8,4 +8,14 @@ ActiveAdmin.register Project do
     column :url
     actions
   end
+  form do |f|
+    f.inputs do
+      f.input :name
+      f.input :description, as: :wysihtml5, commands: :all, blocks: :all
+      f.input :summary
+      f.input :role
+      f.input :url
+    end
+    f.actions
+  end
 end
