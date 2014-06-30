@@ -113,7 +113,7 @@ header {
   padding: 0;
   color: #fff;
   float: left;
-  background: url("jme_logo_light.png");
+  background: image-url("jme_logo_light.png");
   background-size: 100%;
   background-position: -4px 14px;
   background-repeat: no-repeat;
@@ -122,7 +122,7 @@ header {
 }
 header.below-shelf {
   .logo {
-    background-image: url("jme_logo_dark.png");
+    background-image: image-url("jme_logo_dark.png");
   }
   .nav-collapse a:hover, .nav-collapse a.active {
     color: #c8c8c8;
