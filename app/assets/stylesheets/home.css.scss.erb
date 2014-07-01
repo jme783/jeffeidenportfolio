@@ -1,0 +1,230 @@
+/* PROJECTS */
+.project {
+  border: 2px solid $medium-gray;
+  margin-bottom: 3rem;
+  color: $medium-gray;
+  text-align: center;
+  padding: 20px;
+  &:hover {
+    cursor: pointer;
+    border: 2px solid $cream;
+    color: $cream;
+    .product_thumbnail {
+      opacity: 1;
+    }
+  }
+  .product_thumbnail {
+    margin-bottom: 1rem;
+    opacity: 0.7;
+  }
+  .project_summary {
+    font-weight: 300;
+  }
+}
+p.about_me {
+  font-size: 1.4375em;
+}
+.skill-description {
+  margin-bottom: 2rem;
+}
+.skill-title {
+  margin-top: 1rem;
+}
+#wcwb {
+  display: block;
+}
+.ninja-skills {
+  display: block;
+  margin: 0 auto;
+}
+.top_shelf_mask {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  &:before, &:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 0;
+    border-bottom: 20px solid $dark-gray;
+    width: 50%;
+  }
+  &:before {
+    border-left: 0;
+    border-right: 20px solid transparent;
+    left: 0;
+  }
+  &:after {
+    right: 0;
+    border-right: 0;
+    border-left: 20px solid transparent;
+  }
+}
+.dry-erase-images {
+  position: absolute;
+  visibility: hidden;
+}
+.chattermap-dry-erase {
+  bottom: 5%;
+  right: 3%;
+  width: 400px;
+}
+.flow-dry-erase {
+  bottom: 14%;
+  left: 5%;
+  width: 550px;
+}
+.ab-dry-erase {
+  top: 16%;
+  right: 4%;
+  width: 240px;
+}
+.share-dry-erase {
+  top: 11%;
+  left: 3%;
+  width: 280px;
+}
+.hero-text {
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  color: $black;
+  margin-top: 250px;
+}
+.top-shelf.background-container {
+  background-size: cover;
+  position: relative;
+  padding: 66px 0 0;
+  overflow: hidden;
+}
+.testimonial {
+  margin-bottom: 5rem;
+}
+.who_said {
+  margin-top: 1rem;
+  p {
+    margin-bottom: 0;
+  }
+}
+h4.testimonial_body {
+  margin-top: -8px;
+  font-weight: 300;
+  z-index: 1;
+  position: relative;
+  text-indent: 50px;
+}
+.testimonials > :last-child {
+   margin-bottom: 0 !important; 
+}
+.section-header {
+  margin-top: 0;
+  margin-bottom: 66px;
+  border-bottom: 1px solid $faint-gray;
+  padding-bottom: 10px;
+  font-weight: 300;
+  &.uppercase {
+    letter-spacing: 3px;
+    font-weight: 300;
+  }
+}
+.quotation-mark {
+  font-size: 8rem;
+  font-family: sans-serif;
+  color: $faint-gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  line-height: 4rem;
+  padding-left: 0.7375rem;
+}
+.testimonial-content {
+  position: relative;
+}
+.skill {
+  margin-bottom: 3rem;
+}
+@media #{$large-up} {
+  margin-bottom: 0;
+}
+@media #{$medium-only} {
+  .share-dry-erase {
+    width: 220px;
+  }
+  .ab-dry-erase {
+    width: 230px;
+  }
+  .flow-dry-erase {
+    width: 360px;
+    bottom: 22%;
+    left: 3%;
+  }
+  .chattermap-dry-erase {
+    width: 300px;
+  }
+  .hero-text {
+    margin-top: 275px;
+    font-size: 2.5rem;
+  }
+
+}
+@media #{$medium-up} {
+  .top-shelf.background-container {
+    min-height: 745px;
+  }
+}
+@media #{$small-only} {
+  .skill .accordion {
+    max-width: 70%;
+    margin: 1rem auto 0;
+  }
+  .ninja-skills {
+    max-width: 35%;
+  }
+  .hero-text {
+    margin-top: 0;
+    font-size: 1.6875rem;
+    letter-spacing: 1px;
+    line-height: 2rem;
+    strong {
+      display: block;
+    }
+  }
+  .dry-erase-images.share-dry-erase {
+    display: block !important;
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 25px auto 50px;
+    width: 220px;
+  }
+  .top-shelf.background-container {
+    min-height: 400px;
+  }
+
+  .section-header {
+    margin-bottom: 25px;
+  }
+  .portrait-photo {
+    display: block;
+  }
+  .about-text, .testimonial-content {
+    float: none !important;
+  }
+  .testimonial {
+    margin-bottom: 3rem;
+  }
+  .testimonial-content {
+    h4 {
+      text-indent: 0;
+    }
+    .quotation-mark {
+      display: none;
+    }
+  }
+  p.about_me {
+    font-size: 0.9rem;
+  }
+}

@@ -10,7 +10,6 @@ module JeffEidenPortfolio
   class Application < Rails::Application
     config.i18n.enforce_available_locales = true
     config.assets.enabled = true
-    config.assets.digest = true
     config.assets.precompile += %w( home.js )
     config.assets.precompile += %w( jquery.js )
     config.assets.precompile += %w( jquery_ujs.js )

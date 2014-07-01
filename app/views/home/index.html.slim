@@ -56,7 +56,10 @@ section
       - @projects.each do |project|
         div.large-4.medium-6.columns
           div.project
-            img.product_thumbnail src="http://placehold.it/325x250"
+            - if !project.thumbnail.nil?
+              = image_tag("#{project.thumbnail}", :class => "product_thumbnail")
+            - else
+              img.product_thumbnail src="http://placehold.it/325x250"
             h5.project_name = project.name
             p.project_summary
               em = project.summary

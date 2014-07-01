@@ -1,5 +1,5 @@
 ActiveAdmin.register Project do
-  permit_params :name, :description, :summary, :role, :url
+  permit_params :name, :description, :summary, :role, :url, :thumbnail
   index do
     column :name
     column :description
@@ -15,6 +15,7 @@ ActiveAdmin.register Project do
       f.input :summary
       f.input :role
       f.input :url
+      f.input :thumbnail
     end
     f.actions
   end
