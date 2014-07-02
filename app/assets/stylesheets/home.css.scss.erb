@@ -21,6 +21,24 @@
     font-weight: 300;
   }
 }
+.project-slideout {
+  position: fixed;
+  right: -80%;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  background-color: $black;
+  z-index: 9999;
+  border-left: 1px solid $faint-gray;
+  .slideout-trigger {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    display: inline-block;
+
+  }
+}
+/* END PROJECTS CSS */
 p.about_me {
   font-size: 1.4375em;
 }
@@ -94,6 +112,7 @@ p.about_me {
   margin-top: 250px;
 }
 .top-shelf.background-container {
+  background-image: image-url("dry-erase-bckd.jpg");
   background-size: cover;
   position: relative;
   padding: 66px 0 0;

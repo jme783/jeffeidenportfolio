@@ -10,15 +10,16 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
     this.abDryEraseImg = opts.abDryEraseImg
     this.chattermapDryEraseImg = opts.chattermapDryEraseImg
     this.accordion = opts.accordion
+    this.projects = opts.projects
     return this
   homePage.New = New
 
   New::bind = ->
     this.bindPageLoad()
-    this.bindWindowResize()
     this.bindTopShelfScroll()
     this.bindAccordionClick()
     this.bindAccordionHover()
+    this.bindProjectsClick()
     return this
 
   New::bindPageLoad = ->
@@ -30,8 +31,6 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
     self.shareDryEraseImg.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', () -> self.executeFadeAnimation(self.chattermapDryEraseImg, 'Right'))
     self.chattermapDryEraseImg.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', () -> self.executeFadeAnimation(self.flowDryEraseImg, 'Left'))
     self.flowDryEraseImg.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', () -> self.executeFadeAnimation(self.abDryEraseImg, 'Right'))
-  New::bindWindowResize = ->
-    self = this
 
   New::bindTopShelfScroll = ->
     self = this
@@ -58,17 +57,29 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
     ).mouseleave ->
       $(this).parent().find('div.content').css('border','2px solid #8c8c8c').css('border-top', 'none')
       return
-  New::resizeTopShelf = ->
-    self = this
-    vph = $(window).height()
-    vpw = $(window).width()
-    if vpw >= 640
-      self.topSection.css({'height':vph + 'px'})
 
   New::executeFadeAnimation  = (element, direction) ->
     self = this
     element.css('visibility','visible')
     element.addClass('animated fadeIn'+direction)
+
+  New::bindProjectsClick = ->
+    self = this
+    this.projects.click (event)->
+      event.preventDefault()
+      projectSlideout = $(".project-slideout")
+      projectSlideoutWidth = $(".project-slideout").width()
+      # Toggle open class
+      projectSlideout.toggleClass("open")
+      # slide slideout
+      if projectSlideout.hasClass("open")
+        projectSlideout.animate 
+          right: "0px"
+        , 200
+      else
+        projectSlideout.animate
+          right: -projectSlideoutWidth
+        , 200
 
 
 )(jQuery, JeffPortfolio.homePage)

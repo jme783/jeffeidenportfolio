@@ -49,13 +49,15 @@ section
                 - skill.known_technologies.each do |known_technology|
                   p = known_technology.name
   section.background-container.dk-gray.projects#projects
+    div.project-slideout
+      a href="#" class="slideout-trigger" x
     div.row
       div.large-12.columns
         h3.section-header.uppercase Projects
     div.row
       - @projects.each do |project|
         div.large-4.medium-6.columns
-          div.project
+          div.project.slideout-trigger
             - if !project.thumbnail.nil?
               = image_tag("#{project.thumbnail}", :class => "product_thumbnail")
             - else
@@ -87,7 +89,8 @@ section
           flowDryEraseImg: $(".flow-dry-erase"),
           abDryEraseImg: $(".ab-dry-erase"),
           chattermapDryEraseImg: $(".chattermap-dry-erase"),
-          accordion: $("dl.accordion")
+          accordion: $("dl.accordion"),
+          projects: $(".slideout-trigger")
         }).bind();
     })(jQuery, JeffPortfolio.homePage.New)
 
