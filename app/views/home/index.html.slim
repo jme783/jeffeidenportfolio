@@ -51,20 +51,22 @@ section
   section.background-container.dk-gray.projects#projects
     div.project-slideout
       a href="#" class="slideout-trigger" x
+    div.overlay.slideout-trigger
     div.row
       div.large-12.columns
         h3.section-header.uppercase Projects
     div.row
       - @projects.each do |project|
         div.large-4.medium-6.columns
-          div.project.slideout-trigger
-            - if !project.thumbnail.nil?
-              = image_tag("#{project.thumbnail}", :class => "product_thumbnail")
-            - else
-              img.product_thumbnail src="http://placehold.it/325x250"
-            h5.project_name = project.name
-            p.project_summary
-              em = project.summary
+          = link_to project_path(project), remote: true
+            div.project.slideout-trigger id="#{project.id}"
+              - if !project.thumbnail.nil?
+                = image_tag("#{project.thumbnail}", :class => "product_thumbnail")
+              - else
+                img.product_thumbnail src="http://placehold.it/325x250"
+              h5.project_name = project.name
+              p.project_summary
+                em = project.summary
   section.background-container.charcoal-gray.testimonials#testimonials
     div.row
       div.large-12.columns

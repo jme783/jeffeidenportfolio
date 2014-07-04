@@ -73,13 +73,16 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
       projectSlideout.toggleClass("open")
       # slide slideout
       if projectSlideout.hasClass("open")
-        projectSlideout.animate 
+        projectSlideout.show().animate 
           right: "0px"
         , 200
+        $(".overlay").fadeIn(200)
       else
         projectSlideout.animate
           right: -projectSlideoutWidth
-        , 200
+        , 200, ->
+          projectSlideout.hide()
+        $(".overlay").fadeOut(200)
 
 
 )(jQuery, JeffPortfolio.homePage)
