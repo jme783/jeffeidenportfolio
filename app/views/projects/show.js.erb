@@ -1,1 +1,1 @@
-alert("<%= @project.name %>");
+$('.project-description').html("<%= escape_javascript(render :partial => @project.name.downcase) %>");

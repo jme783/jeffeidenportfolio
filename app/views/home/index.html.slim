@@ -1,4 +1,4 @@
-section
+section.content
   header
     div.row
       div.large-12.columns
@@ -49,9 +49,6 @@ section
                 - skill.known_technologies.each do |known_technology|
                   p = known_technology.name
   section.background-container.dk-gray.projects#projects
-    div.project-slideout
-      a href="#" class="slideout-trigger" x
-    div.overlay.slideout-trigger
     div.row
       div.large-12.columns
         h3.section-header.uppercase Projects
@@ -80,6 +77,10 @@ section
           h4.testimonial_body #{testimonial.blurb_text}
           div.who_said.subtle-text
             p.uppercase #{testimonial.author_name},&nbsp;#{testimonial.author_position} at&nbsp;#{testimonial.author_company}
+div.project-slideout
+  a href="#" class="slideout-trigger" x
+  div.project-description
+div.overlay.slideout-trigger
 - content_for :page_js do
   javascript:
     (function($, homePage){

@@ -77,12 +77,14 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
           right: "0px"
         , 200
         $(".overlay").fadeIn(200)
+        $("body").css("overflow","hidden")
       else
         projectSlideout.animate
           right: -projectSlideoutWidth
         , 200, ->
           projectSlideout.hide()
         $(".overlay").fadeOut(200)
+        $("body").css("overflow", "auto")
 
 
 )(jQuery, JeffPortfolio.homePage)

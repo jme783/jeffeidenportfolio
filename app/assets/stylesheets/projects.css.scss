@@ -1,0 +1,25 @@
+.project-showcase-image {
+  max-width: 70%;
+  display: block;
+  margin: 2rem auto 0;
+}
+.image-caption {
+  text-align: center;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 1rem;
+}
+/* BetterThanReviews Styles */
+#customer-question {
+  display: block;
+  margin-top: 1em;
+}
+
+@media #{$small-only} {
+  .project-showcase-image {
+    max-width: 100%;
+  }
+  .image-caption {
+    font-size: 0.8rem;
+  }
+}
