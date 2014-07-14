@@ -1,11 +1,15 @@
+@import "compass";
 @import "foundation_and_overrides";
 @import "home";
 @import "responsive_nav";
 @import "animate";
-@import "compass";
 @import "projects";
 body {
   color: $cream;
+}
+a {
+  @include transition-property(color);
+  @include transition-duration(.3s);
 }
 
 .background-container {
@@ -45,8 +49,11 @@ ul, ol, dl {
   border: 2px solid $medium-gray;
   text-align: center;
   font-size: 1.1rem;
+  @include transition-property(color);
+  @include transition-duration(.3s);
   &:hover {
     border: 2px solid $cream;
+    border-bottom-color: $cream;
     color: $cream;
   }
 }
@@ -55,9 +62,7 @@ ul, ol, dl {
     border-bottom: none;
   }
   .content.active {
-    background: rgba(0,0,0,0);
-    border: 2px solid $medium-gray;
-    border-top: none;
+    background: $black;
   }
 }
 dd:before {

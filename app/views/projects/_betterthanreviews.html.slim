@@ -1,14 +1,26 @@
+h4.project-title #{@project.name}
+h5.role #{@project.role}
 p
-  |We often ask ourselves the same question time and time again when looking for services for home services:
+  |We often ask ourselves the same question time and time again when looking for home services:
   br
   em.text-center#customer-question "Who can I trust to get the job done right?"
-p BetterThanReviews.com efficiently connects consumers to home services providers through a marketplace built on transparency and integrity. Focused primarily on the home security industry, BetterThanReviews generates and distributes hundreds of leads to reputable security companies each day.
+p 
+  a href="#{@project.url}" target="_blank" BetterThanReviews.com 
+  |efficiently connects consumers to home services providers through a marketplace built on transparency and integrity. Focused primarily on the home security industry, BetterThanReviews generates and distributes hundreds of leads to reputable security companies each day.
 p As the founder of BetterThanReviews.com, I took on a variety of roles on both the technical and functional sides of the business. In addition to setting the high-level strategy and direction of the company, I was heavily involved in creating and improving the product on a day-to-day basis. 
 p One critical ongoing task was to translate customer needs into realistically atainable user stories. Wireframing new features was essential to setting a vision for what needed to be built and aligning our development team around a common goal:
 = image_tag("btr_mockup_dashboard.png", class: "project-showcase-image")
 p.image-caption The admin dashboard helps companies understand lead generation performance on BetterThanReviews.com
 p Once the stories were prioritized and arranged into sprints, I allocated development tasks to each member of our team (including myself). I handled a variety of front and back-end related user stories, and strengthened my understanding of the full development stack. We built BetterThanReviews.com using Ruby on Rails, and deployed it via Heroku.
 p
-  |Our team's biggest product win was likely the development of our lead generation engine, nicknamed LeadFeeder. LeadFeeder took potential customers through a simple yet engaging lead form, and notified the security company each time a new lead was received. Companies could easily customize the look and feel of their LeadFeeder from their admin settings. The coolest part? LeadFeeder can be added to
-  strong &nbsp;any website&nbsp;
-  |by pasting one line of code.
+  |Our team's biggest product win was likely the development of our lead generation engine, nicknamed LeadFeeder. LeadFeeder took potential customers through a simple yet engaging lead form, and notified the security company each time a new lead was received. Companies could easily customize the look and feel of their LeadFeeder from their admin settings. LeadFeeder is embedded on each company's BetterThanReviews profile, and is also available for security companies to add to their own websites to improve their online lead generation.
+= image_tag("btr_profile.png", class: "project-showcase-image")
+p.image-caption Consumers can find reviews of a security company on their profile, and easily request a quote with LeadFeeder
+p Awareness and understanding of SEO best practices was absolutely essential to driving consumer traffic to the site. Through a combination of utilizing Google's rich snippet markup with content-rich pages, BetterThanReviews now appears on thousands of organic search results each day for security related queries.
+= image_tag("btr_seo_closeup.jpg", class: "project-showcase-image")
+p.image-caption Location-specific pages provide extremely targeted and valuable content that Google ranks highly
+p 
+  |In a short year, BetterThanReviews.com has gone from a high-level concept to a revenue-positive company. Recently, BetterThanReviews 
+  a href="http://www.esaweb.org/news/164357/ESA-Partners-with-BetterThanReviews-to-Launch-New-Feature-on-Alarm.org.htm" target="_blank" partnered with the Electronic Security Association
+  |, an industry leader in the security space, to&nbsp;
+  |power its lead generation and distribution to its memeber companies.

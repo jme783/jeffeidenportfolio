@@ -12,8 +12,9 @@
 //
 //= require foundation
 //= require turbolinks
+//= require accordion
 //= require responsive-nav
 //= require fastclick
 //= require scroll
 //= require fixed-responsive-nav
-$(function(){ $(document).foundation(); });
+$(function(){ $(document).foundation(); $('.accordion').accordionAnimated();});
