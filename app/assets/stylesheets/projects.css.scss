@@ -23,6 +23,11 @@ h5.role {
   display: block;
   margin-top: 1em;
 }
+/* TOMS Styles */
+#toms-homepage, #toms-our-movement {
+  padding: 10px;
+  background-color: #fff;
+}
 
 @media #{$small-only} {
   .project-showcase-image {
