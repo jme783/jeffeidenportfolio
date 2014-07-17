@@ -1,0 +1,27 @@
+h4.project-title #{@project.name}
+h5.role #{@project.role}
+p
+  |As a reader of online news, I often find myself curious with how others have reacted to what has been published. However, the comment sections of articles have become increasingly disorganized as user generated content has become more prominent online.
+  a href="#{@project.url}" target="_blank" &nbsp;Chattermap
+  |&nbsp;was a side project of mine that aimed to make online discussion simpler and smarter.
+p I was intrigued with the idea of how data visualization could improve how we both understand and participate in online conversation. I was confident in the idea that using shapes, colors, and spacial relationships could tell a story about the conversation occuring far more meaningful than blocks of indented text. In addition, data visualization could make engaging in the discussion more interactive.
+p Drawing high-level conclusions from  analysis of the comments also could help tell the story. Identifying trending topics and emotion in comments were two ideas I had to make it easy to understand how people had responded to the article on a macro level.
+= image_tag("chattermap_product_concept.jpg", class: "project-showcase-image")
+p.image-caption A photoshop mockup of my vision for Chattermap, combining data visualization and semantic analysis
+p
+  |To test out the concept, I built a
+  a href="#{@project.url}" target="_blank" &nbsp;prototype of Chattermap
+  |&nbsp;powered by user comments from Reddit. I used
+  a href="http://d3js.org/" target="_blank" &nbsp;D3.js
+  |&nbsp; Force Layout to power the mapping of the comments into a tree. Each comment is represented by a circle. The size of the circle increases depending on the number of upvotes that the comment has received. Replies are physically linked to the parent comment with a line, creating a visual representation of how the conversation unfolded.
+= image_tag("chattermap_prototype.png", class: "project-showcase-image")
+p.image-caption A recent Reddit thread visualized with Chattermap
+p 
+  |The ultimate goal would be to roll out Chattermap as a third-party comment platform that powers the comment sections on large publisher's websites, similar to
+  a href="https://disqus.com/" target="_blank" &nbsp;DISQUS
+  |&nbsp;or
+  a href="http://web.livefyre.com/" target="_blank" &nbsp;Livefyre
+  |. While at this point Chattermap is still in beta, it has great promise moving forward to improve the way we communicate online.
+
+
+
