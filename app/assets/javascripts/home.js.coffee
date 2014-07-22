@@ -38,7 +38,7 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
        if $(window).scrollTop() >= self.topSection.innerHeight() - 60
          $("header").addClass("below-shelf")
        else
-         $("header").removeClass("below-shelf")
+         $("header").addClass("below-shelf")
        self.heroText.css({'opacity':( 300-$(window).scrollTop() )/100})
 
   New::bindAccordionClick = ->
