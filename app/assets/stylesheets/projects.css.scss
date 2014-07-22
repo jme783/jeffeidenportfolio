@@ -18,6 +18,34 @@ h5.role {
   padding-bottom: 10px;
   margin-bottom: 1.5rem;
 }
+span.technology {
+  padding: 5px 10px;
+  margin-right: 5px;
+  font-weight: 300;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 10px;
+  background-color: $dark-gray;
+  &.development {
+    border: 2px solid $primary-color;
+  }
+  &.ux {
+    border: 2px solid $green;
+  }
+  &.product {
+    border: 2px solid $purple;
+  }
+  &.marketing {
+    border: 2px solid $orange;
+  }
+}
+p.skills-title {
+  display: block;
+  font-style: italic;
+  margin-right: 8px;
+  color: $medium-gray;
+  margin-top: 1em;
+}
 /* BetterThanReviews Styles */
 #customer-question {
   display: block;
@@ -34,6 +62,9 @@ h5.role {
     max-width: 100%;
   }
   .image-caption {
+    font-size: 0.8rem;
+  }
+  span.technology {
     font-size: 0.8rem;
   }
 }
