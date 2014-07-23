@@ -44,16 +44,31 @@ ul, ol, dl {
 .accordion dd {
   position: relative;
 }
-
+.accordion-hover {
+  border: 2px solid $medium-gray;
+  border-top: none;
+  border-bottom-color: $medium-gray;
+}
+.accordion-nonhover {
+  border: 2px solid $medium-gray;
+  border-top: none;
+  border-bottom: 2px solid $medium-gray;
+}
+.red-border-bottom {
+  border-bottom: 2px solid $primary-color !important;
+}
+.gray-border-bottom {
+  border-bottom: 2px solid $medium-gray !important;
+}
 .accordion dd > a {
   border: 2px solid $medium-gray;
   text-align: center;
   font-size: 1.1rem;
-  @include transition-property(color);
+  @include transition-property(color, border);
   @include transition-duration(.3s);
   &:hover {
-    border: 2px solid $cream;
-    border-bottom-color: $cream;
+    border: 2px solid $primary-color;
+    border-bottom-color: $primary-color;
     color: $cream;
   }
 }

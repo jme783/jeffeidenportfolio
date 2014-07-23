@@ -5,11 +5,11 @@
   color: $medium-gray;
   text-align: center;
   padding: 20px;
-  //@include transition-property(border, color);
-  //@include transition-duration(.3s, .3s);
+  @include transition-property(border, color);
+  @include transition-duration(.3s, .3s);
   &:hover {
     cursor: pointer;
-    border: 2px solid $cream;
+    border: 2px solid $primary-color;
     color: $cream;
     .product_thumbnail {
       opacity: 1;
@@ -17,9 +17,7 @@
   }
   .product_thumbnail {
     margin-bottom: 1rem;
-    opacity: 0.7;
-    //@include transition-property(opacity);
-    //@include transition-duration(.3s);
+    opacity: 1;
   }
   .project_summary {
     font-weight: 300;

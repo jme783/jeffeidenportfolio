@@ -52,10 +52,12 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
   New::bindAccordionHover = ->
     self = this
     this.accordion.find('a').mouseenter(->
-      $(this).parent().find('div.content').css('border','2px solid #c8c8c8').css('border-top', 'none')
+      $(this).parent().find('div.content').removeClass("accordion-nonhover").addClass("accordion-hover")
+      $(this).removeClass("gray-border-bottom").addClass("red-border-bottom")      
       return
     ).mouseleave ->
-      $(this).parent().find('div.content').css('border','2px solid #8c8c8c').css('border-top', 'none')
+      $(this).parent().find('div.content').removeClass("accordion-hover").addClass("accordion-nonhover")
+      $(this).removeClass("red-border-bottom").addClass("gray-border-bottom")
       return
 
   New::executeFadeAnimation  = (element, direction) ->
