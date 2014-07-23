@@ -31,7 +31,6 @@ gem 'foundation-rails'
 gem 'slim'
 #Other Gems
 gem 'jquery-turbolinks'
-gem 'asset_sync'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
 gem 'ransack',     github: 'activerecord-hackery/ransack'
