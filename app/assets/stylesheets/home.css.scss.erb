@@ -72,21 +72,20 @@ ul.contact-methods {
   list-style-type:  none;
   margin-top: 15px;
   li {
-    margin-bottom: 7px;
     text-align: center;
     a {
       color: $cream;
     }
     h4 {
-      display: inline-block;
-      margin-left: 13px;
-      vertical-align: middle;
+      display: block;
+      margin-top: 10px;
       font-weight: 300;
+      font-size: 1.1rem;
     }
   }
   [class^="icon-"], [class*=" icon-"] {
-    font-size: 1.8rem;
-    color: $primary-color;
+    font-size: 2.5rem;
+    color: $medium-gray;
   }
 
 }
@@ -246,6 +245,11 @@ h4.testimonial_body {
   margin-bottom: 0;
 }
 @media #{$medium-only} {
+  ul.contact-methods {
+    li.margin-bottom {
+        margin-bottom: 40px;
+     }
+  }
   .skill.product {
     clear: both;
   }
@@ -288,6 +292,20 @@ h4.testimonial_body {
   }
 }
 @media #{$small-only} {
+  ul.contact-methods {
+    li {
+        margin-bottom: 3rem;
+        h4 {
+          margin-top: 5px;
+        }
+        &.no-margin-bottom {
+          margin-bottom: 0;
+        }
+     }
+     [class^="icon-"], [class*=" icon-"] {
+       font-size: 2rem;
+    }
+  }
   .skill .accordion {
     max-width: 70%;
     margin: 1rem auto 0;
