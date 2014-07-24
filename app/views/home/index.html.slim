@@ -1,5 +1,5 @@
 section.content
-  header.below-shelf
+  header
     div.row
       div.large-12.columns
         a href="#" class="logo"
@@ -17,10 +17,11 @@ section.content
     div.row
       div.large-12.columns
         h2.text-center.hero-text
-    = image_tag("dry-erase-chattermap.png", :class => "dry-erase-images chattermap-dry-erase show-for-medium-up")
-    = image_tag("dry-erase-share.png", class: "dry-erase-images share-dry-erase show-for-medium-up")
-    = image_tag("dry-erase-flow.png", class: "dry-erase-images flow-dry-erase show-for-medium-up")
-    = image_tag("dry-erase-a-b.png", class: "dry-erase-images ab-dry-erase show-for-medium-up")
+          span.first-line
+            |What can we&nbsp;
+          strong build together
+          |?
+    div.top-shelf-media
     div.top_shelf_mask
   section.background-container.dk-gray.about#me
     div.row

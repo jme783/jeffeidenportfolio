@@ -2,44 +2,29 @@ window.JeffPortfolio = window.JeffPortfolio || {}
 JeffPortfolio.homePage = JeffPortfolio.homePage || {}
 (($, homePage) ->
   New = (opts)->
-    this.dryEraseImgs = opts.dryEraseImgs
     this.topSection = opts.topSection
     this.heroText = opts.heroText
-    this.shareDryEraseImg = opts.shareDryEraseImg
-    this.flowDryEraseImg = opts.flowDryEraseImg
-    this.abDryEraseImg = opts.abDryEraseImg
-    this.chattermapDryEraseImg = opts.chattermapDryEraseImg
     this.accordion = opts.accordion
     this.projects = opts.projects
     return this
   homePage.New = New
 
   New::bind = ->
-    this.bindPageLoad()
     this.bindTopShelfScroll()
     this.bindAccordionClick()
     this.bindAccordionHover()
     this.bindProjectsClick()
     return this
 
-  New::bindPageLoad = ->
-    self = this
-    setTimeout (->
-      self.executeFadeAnimation self.shareDryEraseImg, "Left"
-      return
-    ), 500
-    self.shareDryEraseImg.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', () -> self.executeFadeAnimation(self.chattermapDryEraseImg, 'Right'))
-    self.chattermapDryEraseImg.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', () -> self.executeFadeAnimation(self.flowDryEraseImg, 'Left'))
-    self.flowDryEraseImg.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', () -> self.executeFadeAnimation(self.abDryEraseImg, 'Right'))
-
   New::bindTopShelfScroll = ->
     self = this
     $(window).bind "scroll", ->
-       if $(window).scrollTop() >= self.topSection.innerHeight() - 60
+       if $(window).scrollTop() == 0
+         $('.top-shelf-media, .hero-text').attr('style', 'transform: translate3d(0px, 0px, 0px) scale(1) rotate(0deg); opacity: 1;')
+       else if $(window).scrollTop() >= self.topSection.innerHeight() - 60
          $("header").addClass("below-shelf")
        else
-         $("header").addClass("below-shelf")
-       self.heroText.css({'opacity':( 300-$(window).scrollTop() )/100})
+         $("header").removeClass("below-shelf")
 
   New::bindAccordionClick = ->
     self = this

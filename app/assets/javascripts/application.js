@@ -17,4 +17,5 @@
 //= require fastclick
 //= require scroll
 //= require fixed-responsive-nav
+//= require parallax
 $(function(){ $(document).foundation(); $('.accordion').accordionAnimated();});
