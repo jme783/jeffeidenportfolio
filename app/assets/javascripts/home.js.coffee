@@ -19,7 +19,9 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
   New::bindTopShelfScroll = ->
     self = this
     $(window).bind "scroll", ->
-       if $(window).scrollTop() >= self.topSection.innerHeight() - 60
+       if $(window).scrollTop() == 0
+         $('.top-shelf-media, .hero-text').attr('style', 'transform: translate3d(0px, 0px, 0px) scale(1) rotate(0deg); opacity: 1;')
+       else if $(window).scrollTop() >= self.topSection.innerHeight() - 60
          $("header").addClass("below-shelf")
        else
          $("header").removeClass("below-shelf")

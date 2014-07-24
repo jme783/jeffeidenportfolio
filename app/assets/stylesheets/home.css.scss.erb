@@ -148,7 +148,7 @@ p.about_me {
   overflow: hidden;
 }
 .top-shelf.background-container .top-shelf-media {
-  background-image: url(https://pickcrew.com/img/hero-home.jpg);
+  background-image: url(<%= asset_path 'hero-home_progressive.jpg' %>);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -240,8 +240,11 @@ h4.testimonial_body {
     width: 300px;
   }
   .hero-text {
-    margin-top: 275px;
-    width: 90%;
+    font-size: 4rem;
+    letter-spacing: 3px;
+    span.first-line {
+      display: block;
+    }
   }
   .project-slideout {
     width: 90%;
@@ -269,10 +272,10 @@ h4.testimonial_body {
     max-width: 35%;
   }
   .hero-text {
-    margin-top: 15px;
-    height: 60px;
-    width: 95%;
-    strong {
+    margin-top: 100px;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    span.first-line {
       display: block;
     }
   }
