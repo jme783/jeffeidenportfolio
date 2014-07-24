@@ -1,5 +1,5 @@
 section.content
-  header.below-shelf
+  header
     div.row
       div.large-12.columns
         a href="#" class="logo"
@@ -13,15 +13,16 @@ section.content
               a.uppercase href="#projects" data-scroll="" Projects
             li
               a.uppercase.last-nav-element href="#testimonials" data-scroll="" Testimonials
-  section.background-container.top-shelf
-    div.row
-      div.large-12.columns
-        h2.text-center.hero-text
-    = image_tag("dry-erase-chattermap.png", :class => "dry-erase-images chattermap-dry-erase show-for-medium-up")
-    = image_tag("dry-erase-share.png", class: "dry-erase-images share-dry-erase show-for-medium-up")
-    = image_tag("dry-erase-flow.png", class: "dry-erase-images flow-dry-erase show-for-medium-up")
-    = image_tag("dry-erase-a-b.png", class: "dry-erase-images ab-dry-erase show-for-medium-up")
-    div.top_shelf_mask
+  div.parallax-top-wrapper
+    section.background-container.top-shelf
+      div.row
+        div.large-12.columns
+          h2.text-center.hero-text
+            |What can we&nbsp;
+            strong build together
+            |?
+      div.top-shelf-media
+      div.top_shelf_mask
   section.background-container.dk-gray.about#me
     div.row
       div.large-3.medium-4.small-6.columns

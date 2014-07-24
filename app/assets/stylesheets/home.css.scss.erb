@@ -87,6 +87,7 @@ p.about_me {
   left: 0;
   width: 100%;
   height: 20px;
+  z-index: 1000;
   &:before, &:after {
     content: ' ';
     display: block;
@@ -133,21 +134,42 @@ p.about_me {
 }
 .hero-text {
   margin-top: 250px;
-  background-image: url(<%= asset_path 'dry-erase-headline.png' %>);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  width: 800px;
-  height: 95px;
   display: block;
-  margin: 290px auto 0;
-}
-.top-shelf.background-container {
-  background-image: url(<%= asset_path 'dry-erase-bckd.jpg' %>);
-  background-size: 100%;
+  font-weight: 300;
+  letter-spacing: 5px;
+  margin: 160px auto 0;
+  font-size: 4rem;
+  z-index: 3;
   position: relative;
-  padding: 66px 0 0;
-  background-position: 0 66px;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.35);
+}
+.top-shelf {
+  position: relative;
   overflow: hidden;
+}
+.top-shelf.background-container .top-shelf-media {
+  background-image: url(https://pickcrew.com/img/hero-home.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $dark-gray;
+    opacity: 0.3;
+  }
 }
 .testimonial {
   margin-bottom: 5rem;
