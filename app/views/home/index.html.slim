@@ -6,13 +6,13 @@ section.content
         nav class="nav-collapse"
           ul
             li
-              a.uppercase href="#me" data-scroll="" Me
-            li
               a.uppercase href="#skills" data-scroll="" Skills
             li
               a.uppercase href="#projects" data-scroll="" Projects
             li
-              a.uppercase.last-nav-element href="#testimonials" data-scroll="" Testimonials
+              a.uppercase href="#testimonials" data-scroll="" Testimonials
+            li
+              a.uppercase.last-nav-element href="#contact" data-scroll="" Contact
   section.background-container.top-shelf
     div.row
       div.large-12.columns
@@ -74,6 +74,28 @@ section.content
           h4.testimonial_body #{testimonial.blurb_text}
           div.who_said.subtle-text
             p.uppercase #{testimonial.author_name},&nbsp;#{testimonial.author_position} at&nbsp;#{testimonial.author_company}
+  section.background-container.dk-gray.contact#contact
+    div.row
+      div.large-12.columns
+        h3.section-header.uppercase Contact
+      div.contact-info
+        ul.contact-methods
+          li.email.large-4.columns
+            a href="mailto:jeff.m.eiden@gmail.com"
+              span.icon-envelope
+              h4 jeff.m.eiden@gmail.com
+          /li.linkedin.large-3.columns
+            a href="https://www.linkedin.com/profile/view?id=40960825&trk=spm_pic" target="_blank"
+              span.icon-linkedin
+              h4 Jeff Eiden
+          li.github.large-4.columns
+            a href="https://github.com/jme783" target="_blank"
+              span.icon-github
+              h4 jme783
+          li.twitter.large-4.columns
+            a href="https://twitter.com/jeffeiden" target="_blank"
+              span.icon-twitter
+              h4 @jeffeiden
 div.project-slideout
   a href="#" class="slideout-trigger" x
   div.project-description
