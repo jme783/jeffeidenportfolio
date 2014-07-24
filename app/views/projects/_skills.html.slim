@@ -1,5 +1,5 @@
 div.skills
-  p.skills-title Technologies Used:
+  p.skills-title Technologies used:
   - @known_technologies.keys.each do |skill|
     - for technology in @known_technologies[skill]
       span title="#{technology.skill.name}" class="technology #{technology.skill.name.downcase.split[0]}"  = technology.name

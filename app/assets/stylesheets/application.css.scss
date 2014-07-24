@@ -27,6 +27,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: normal;
+  font-family: "ff-enzo-web",sans-serif;
 }
 .subtle-text {
   color: $medium-gray;
@@ -65,6 +66,8 @@ ul, ol, dl {
   border: 2px solid $medium-gray;
   text-align: center;
   font-size: 1.1rem;
+  font-weight: 100;
+  font-family: $paragraph-font-family;
   @include transition-property(color, border);
   @include transition-duration(.3s);
   &:hover {
@@ -106,7 +109,7 @@ dd.active:before {
     padding: 30px 0;
   }
   p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .accordion dd > a {
     font-size: 0.9rem;

@@ -10,13 +10,14 @@
   margin-top: 1rem;
 }
 h4.project-title {
-  font-weight: 500;
+  font-weight: 600;
 }
 h5.role {
   color: $medium-gray;
   border-bottom: 1px solid $faint-gray;
   padding-bottom: 10px;
   margin-bottom: 1.5rem;
+  font-weight: 600;
 }
 span.technology {
   padding: 5px 10px;
@@ -26,6 +27,7 @@ span.technology {
   display: inline-block;
   margin-bottom: 10px;
   background-color: $dark-gray;
+  font-family: "adelle", serif;
   &.development {
     border: 2px solid $primary-color;
   }
@@ -41,10 +43,10 @@ span.technology {
 }
 p.skills-title {
   display: block;
-  font-style: italic;
   margin-right: 8px;
   color: $medium-gray;
   margin-top: 1em;
+  font-weight: 300;
 }
 /* BetterThanReviews Styles */
 #customer-question {

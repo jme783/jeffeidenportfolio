@@ -20,7 +20,11 @@
     opacity: 1;
   }
   .project_summary {
-    font-weight: 300;
+    font-weight: 100;
+    color: $medium-gray;
+  }
+  .project_name {
+    font-weight: 600;
   }
 }
 .project-slideout {
@@ -31,7 +35,7 @@
   height: 100%;
   overflow: hidden;
   background-color: $black;
-  z-index: 9999;
+  z-index: 10000;
   border-left: 1px solid $faint-gray;
   p {
     margin-bottom: 1rem;
@@ -45,7 +49,7 @@
   .slideout-trigger {
     position: absolute;
     top: 12px;
-    right: 12px;
+    right: 30px;
     display: inline-block;
     font-size: 1.5rem;
     border: 1px solid;
@@ -61,7 +65,7 @@
   width: 100%;
   height: 100%;
   background: rgba(18,19,20,0.9);
-  z-index: 4;
+  z-index: 9999;
 }
 /* END PROJECTS CSS */
 /* ABOUT ME CSS */
@@ -76,11 +80,9 @@ ul.contact-methods {
     a {
       color: $cream;
     }
-    h4 {
+    p {
       display: block;
       margin-top: 10px;
-      font-weight: 300;
-      font-size: 1.1rem;
     }
   }
   [class^="icon-"], [class*=" icon-"] {
@@ -95,7 +97,8 @@ ul.contact-methods {
 }
 .skill-title.uppercase {
   margin-top: 1rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 #wcwb {
   display: block;
@@ -202,14 +205,16 @@ ul.contact-methods {
   margin-top: 1rem;
   p {
     margin-bottom: 0;
+    font-weight: 600;
   }
 }
 h4.testimonial_body {
   margin-top: -8px;
-  font-weight: 300;
+  font-weight: 100;
   z-index: 1;
   position: relative;
   text-indent: 50px;
+  font-family: "adelle", serif;
 }
 .testimonials > :last-child {
    margin-bottom: 0 !important; 
@@ -355,7 +360,7 @@ h4.testimonial_body {
     }
   }
   p.about_me {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .project-slideout {
     width: 100%;
