@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Portfolio | Jeff Eiden" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Jeff Eiden | Entrepreneur, Developer, Designer" %></title>
+    <meta name="description" content="What can we build together? I'm Jeff Eiden, and I strive to create things with web technology that improve the quality of our lives." />
     <script type="text/javascript" src="//use.typekit.net/xcm4jqf.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <!-- ****** faviconit.com favicons ****** -->
@@ -27,6 +28,12 @@
     <meta name="msapplication-TileImage" content="/favicon-144.png">
     <meta name="msapplication-config" content="/browserconfig.xml">
     <!-- ****** faviconit.com favicons ****** -->
+    <!-- for Facebook -->
+    <meta property="og:title" content="Jeff Eiden | Entrepreneur, Developer, Designer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.protocol() + request.host_with_port() %>" />
+    <meta property="og:image" content="<%= request.protocol() + request.host_with_port() %><%= asset_path 'jeff_eiden_portrait.jpg' %>" />
+    <meta property="og:description" content="What can we build together? I'm Jeff Eiden, and I strive to create things with web technology that improve the quality of our lives." />
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "jquery" %>
