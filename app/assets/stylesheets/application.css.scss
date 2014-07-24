@@ -12,6 +12,9 @@ a {
   @include transition-property(color);
   @include transition-duration(.3s);
 }
+#g-plus-link {
+  display: none;
+}
 
 .background-container {
   width: 100%;
