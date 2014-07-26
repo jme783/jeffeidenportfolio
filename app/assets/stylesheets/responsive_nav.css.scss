@@ -304,6 +304,15 @@ header.below-shelf {
 }
 
 @media #{$small-only} {
+  header {
+    display: block;
+    background: #1e1e1e;
+    border-bottom: 1px solid #323232;
+    position: fixed;
+    .nav-collapse a:active, .nav-collapse .active a {
+      color: #c8c8c8;
+    }
+  }
   .logo {
     width: 120px;
     background-position: 0 16px;
