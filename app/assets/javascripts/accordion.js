@@ -21,15 +21,19 @@
           return;
         }
         var $link = $(this).parent().find("a");
-        $link.css("border-bottom","none");
+        if (!isTouchDevice()) {
+          $link.css("border-bottom","none");
+        }
 
         $targets.eq(i)
           .stop(true, true)
           .slideToggle(options.speed, function() {
-            if($(this).hasClass(options.active_class)) {
-              $link.css("border-bottom", "none")
-            } else {
-              $link.css("border-bottom","2px solid #8c8c8c");
+            if (!isTouchDevice()) {
+              if($(this).hasClass(options.active_class)) {
+                $link.css("border-bottom", "none")
+              } else {
+                $link.css("border-bottom","2px solid #8c8c8c");
+              }
             }
           });
 

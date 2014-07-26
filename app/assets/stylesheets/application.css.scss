@@ -59,8 +59,8 @@ ul, ol, dl {
   border-top: none;
   border-bottom: 2px solid $medium-gray;
 }
-.red-border-bottom {
-  border-bottom: 2px solid $primary-color !important;
+.cream-border-bottom {
+  border-bottom: 2px solid $cream !important;
 }
 .gray-border-bottom {
   border-bottom: 2px solid $medium-gray !important;
@@ -73,9 +73,15 @@ ul, ol, dl {
   font-family: $paragraph-font-family;
   @include transition-property(color, border);
   @include transition-duration(.3s);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   &:hover {
-    border: 2px solid $primary-color;
-    border-bottom-color: $primary-color;
+    border: 2px solid $cream;
+    border-bottom-color: $cream;
+    color: $cream;
+  }
+  &:active {
+    border: 2px solid $cream;
+    border-bottom-color: $cream;
     color: $cream;
   }
 }
@@ -116,6 +122,9 @@ dd.active:before {
   }
   .accordion dd > a {
     font-size: 0.9rem;
+  }
+  .content.active {
+    border: 2px solid $medium-gray;
   }
 }
 

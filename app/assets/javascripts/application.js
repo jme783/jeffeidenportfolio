@@ -19,3 +19,7 @@
 //= require fixed-responsive-nav
 //= require parallax
 $(function(){ $(document).foundation(); $('.accordion').accordionAnimated();});
+isTouchDevice = function() {
+  return 'ontouchstart' in window // works on most browsers 
+  || 'onmsgesturechange' in window; // works on ie10
+}

@@ -295,22 +295,28 @@ header.below-shelf {
 /* Below Shelf Naviation Styles */
 header.below-shelf {
   display: block;
-  background: #1e1e1e;
-  border-bottom: 1px solid #323232;
+  background: $black;
+  border-bottom: 1px solid $faint-gray;
   position: fixed;
   .nav-collapse a:active, .nav-collapse .active a {
-    color: #c8c8c8;
+    color: $cream;
+  }
+  .nav-collapse a {
+    color: $medium-gray;
+    &:hover {
+      color: $cream;
+    }
   }
 }
 
 @media #{$small-only} {
   header {
     display: block;
-    background: #1e1e1e;
-    border-bottom: 1px solid #323232;
+    background: $black;
+    border-bottom: 1px solid $faint-gray;
     position: fixed;
     .nav-collapse a:active, .nav-collapse .active a {
-      color: #c8c8c8;
+      color: $cream;
     }
   }
   .logo {

@@ -14,6 +14,7 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
     this.bindAccordionClick()
     this.bindAccordionHover()
     this.bindProjectsClick()
+    this.isTouchDevice()
     return this
 
   New::bindTopShelfScroll = ->
@@ -36,14 +37,15 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
 
   New::bindAccordionHover = ->
     self = this
-    this.accordion.find('a').mouseenter(->
-      $(this).parent().find('div.content').removeClass("accordion-nonhover").addClass("accordion-hover")
-      $(this).removeClass("gray-border-bottom").addClass("red-border-bottom")      
-      return
-    ).mouseleave ->
-      $(this).parent().find('div.content').removeClass("accordion-hover").addClass("accordion-nonhover")
-      $(this).removeClass("red-border-bottom").addClass("gray-border-bottom")
-      return
+    if !self.isTouchDevice()
+      this.accordion.find('a').mouseenter(->
+        $(this).parent().find('div.content').removeClass("accordion-nonhover").addClass("accordion-hover")
+        $(this).removeClass("gray-border-bottom").addClass("cream-border-bottom")
+        return
+      ).mouseleave ->
+        $(this).parent().find('div.content').removeClass("accordion-hover").addClass("accordion-nonhover")
+        $(this).removeClass("red-border-bottom").addClass("gray-border-bottom")
+        return
 
   New::executeFadeAnimation  = (element, direction) ->
     self = this
@@ -73,5 +75,8 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
         $(".overlay").fadeOut(200)
         $("body").css("overflow", "auto")
 
+  New::isTouchDevice = ->
+    self = this
+    return ` 'ontouchstart' in window || 'onmsgesturechange' in window `
 
 )(jQuery, JeffPortfolio.homePage)
