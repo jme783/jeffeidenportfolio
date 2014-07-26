@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-
+# Ruby Version
+ruby '2.1.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 
@@ -38,6 +39,8 @@ gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
 gem 'activeadmin-wysihtml5', github: 'stefanoverna/activeadmin-wysihtml5'
 gem "sass_rails_patch", "~> 0.0.1"
 gem 'compass-rails'
+gem 'puma'
+gem 'foreman'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
