@@ -14,35 +14,35 @@
     ;
 
     $.extend(options, Foundation.utils.data_options($accordion));
+    // Only do the animations on non-touch devices
+    if(!isTouchDevice()) {
+      $items.each(function(i) {
+        $(this).find('a:eq(0)').on('click.accordion', function() {
+          if(!options.toggleable && $items.eq(0).hasClass(options.active_class)) {
+            return;
+          }
+          var $link = $(this).parent().find("a");
+          if (!isTouchDevice()) {
+            $link.css("border-bottom","none");
+          }
 
-    $items.each(function(i) {
-      $(this).find('a:eq(0)').on('click.accordion', function() {
-        if(!options.toggleable && $items.eq(0).hasClass(options.active_class)) {
-          return;
-        }
-        var $link = $(this).parent().find("a");
-        if (!isTouchDevice()) {
-          $link.css("border-bottom","none");
-        }
-
-        $targets.eq(i)
-          .stop(true, true)
-          .slideToggle(options.speed, function() {
-            if (!isTouchDevice()) {
+          $targets.eq(i)
+            .stop(true, true)
+            .slideToggle(options.speed, function() {
               if($(this).hasClass(options.active_class)) {
                 $link.css("border-bottom", "none")
               } else {
                 $link.css("border-bottom","2px solid #8c8c8c");
               }
-            }
-          });
+            });
 
-        if(!options.multi_expand) {
-          $targets.not(':eq('+i+')')
-            .stop(true, true)
-            .slideUp(options.speed);
-        }
+          if(!options.multi_expand) {
+            $targets.not(':eq('+i+')')
+              .stop(true, true)
+              .slideUp(options.speed);
+          }
+        });
       });
-    });
+    }
   };
 }(jQuery)); 

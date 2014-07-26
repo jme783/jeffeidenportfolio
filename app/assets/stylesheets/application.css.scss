@@ -50,23 +50,23 @@ ul, ol, dl {
   position: relative;
 }
 .accordion-hover {
-  border: 2px solid $medium-gray;
+  border: 2px solid $faint-gray;
   border-top: none;
-  border-bottom-color: $medium-gray;
+  border-bottom-color: $faint-gray;
 }
 .accordion-nonhover {
-  border: 2px solid $medium-gray;
+  border: 2px solid $faint-gray;
   border-top: none;
-  border-bottom: 2px solid $medium-gray;
+  border-bottom: 2px solid $faint-gray;
 }
 .cream-border-bottom {
   border-bottom: 2px solid $cream !important;
 }
 .gray-border-bottom {
-  border-bottom: 2px solid $medium-gray !important;
+  border-bottom: 2px solid $faint-gray !important;
 }
 .accordion dd > a {
-  border: 2px solid $medium-gray;
+  border: 2px solid $faint-gray;
   text-align: center;
   font-size: 1.1rem;
   font-weight: 100;
@@ -124,7 +124,7 @@ dd.active:before {
     font-size: 0.9rem;
   }
   .content.active {
-    border: 2px solid $medium-gray;
+    border: 2px solid $faint-gray;
     border-top: none;
   }
 }
