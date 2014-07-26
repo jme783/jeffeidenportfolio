@@ -40,10 +40,12 @@
     -------------------------------------------------- */
     init = function() {
       scrollIntervalID = setInterval(updatePage, 10);
-      setupValues();
       $window.resize(throwError)
-      if(isTouchDevice) {
+      if(isTouchDevice()) {
         $window.resize(throwError)
+      } else {
+        // Only do Parallax effect on non-mobile devices
+        setupValues();
       }
     }
 
