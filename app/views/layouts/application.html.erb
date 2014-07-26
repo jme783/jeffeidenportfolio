@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="http://schema.org/Person">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,6 +34,15 @@
     <meta property="og:url" content="<%= request.protocol() + request.host_with_port() %>" />
     <meta property="og:image" content="<%= request.protocol() + request.host_with_port() %><%= asset_path 'jeff_eiden_portrait.jpg' %>" />
     <meta property="og:description" content="What can we build together? I'm Jeff Eiden, and I strive to create things with web technology that improve the quality of our lives." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jeff Eiden | Entrepreneur, Developer, Designer">
+    <meta name="twitter:description" content="What can we build together? I'm Jeff Eiden, and I strive to create things with web technology that improve the quality of our lives."> 
+    <meta name="twitter:creator" content="@jeffeiden">
+    <!-- Twitter summary card with large image must be at least 280x150px -->
+    <meta name="twitter:image:src" content="<%= request.protocol() + request.host_with_port() %><%= asset_path 'jeff_eiden_portrait.jpg' %>">
+    <!-- G+ Rich Snippets -->
+    <meta itemprop="url" content="<%= request.protocol() + request.host_with_port() %>" />
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "jquery" %>
