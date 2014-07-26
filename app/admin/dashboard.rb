@@ -1,4 +1,13 @@
 ActiveAdmin.register_page "Dashboard" do
+  controller do
+    before_filter :authenticate
+    protected
+      def authenticate
+        authenticate_or_request_with_http_basic do |username, password|
+        username == "jeff" && password == "H33lmet11"
+      end
+    end
+  end
 
   menu priority: 1, label: proc{ I18n.t("active_admin.dashboard") }
 
