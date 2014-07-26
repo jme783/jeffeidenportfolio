@@ -5,6 +5,7 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
     this.topSection = opts.topSection
     this.heroText = opts.heroText
     this.accordion = opts.accordion
+    this.accordionLink = opts.accordionLink
     this.projects = opts.projects
     return this
   homePage.New = New
@@ -29,11 +30,11 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
 
   New::bindAccordionClick = ->
     self = this
-    this.accordion.click ->
-      if $(this).find('dd').hasClass('active')
-        $(this).find('a').text('Expand Skills')
+    this.accordionLink.click ->
+      if $(this).parent().hasClass('active')
+        $(this).text('Expand Skills')
       else
-        $(this).find('a').text('Collapse Skills')
+        $(this).text('Collapse Skills')
 
   New::bindAccordionHover = ->
     self = this
