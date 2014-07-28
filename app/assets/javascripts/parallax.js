@@ -3,7 +3,7 @@
 
     /*  Globals
     -------------------------------------------------- */
-    var PROPERTIES =               ['translateX', 'translateY', 'opacity', 'rotate', 'scale'],
+    var PROPERTIES =               ['translateX', 'translateY', 'opacity'],
         $window =                  $(window),
         $body =                    $('body'),
         wrappers =                 [],
@@ -23,12 +23,17 @@
             'animations' :  [
               {
                 'selector'    : '.top-shelf-media',
-                'translateY'  : 200
+                'translateY'  : 200,
               },
               {
                 'selector'    : 'h2.hero-text',
                 'opacity'     : [1, -7] //Hack to speed up opacity change
-              } 
+              },
+              {
+                'selector'    : '.top-shelf-blurred',
+                'translateY'  : 200,
+                'opacity'     : [0, 2]
+              }
             ]
           }, {
             'duration' : '100%',

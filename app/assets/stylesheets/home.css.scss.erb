@@ -200,6 +200,31 @@ ul.contact-methods {
     opacity: 0.3;
   }
 }
+.top-shelf-blurred {
+  background-image: url(<%= asset_path 'hero-home_progressive_blurred.jpg' %>);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $dark-gray;
+    opacity: 0.3;
+  }
+}
 .testimonial {
   margin-bottom: 5rem;
 }
