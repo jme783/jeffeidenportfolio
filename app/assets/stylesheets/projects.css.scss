@@ -19,7 +19,7 @@ h4.project-title {
 }
 h5.role {
   color: $medium-gray;
-  border-bottom: 1px solid $faint-gray;
+  border-bottom: 1px solid $hr-gray;
   padding-bottom: 10px;
   margin-bottom: 1.5rem;
   font-weight: 600;
@@ -34,16 +34,16 @@ span.technology {
   background-color: $dark-gray;
   font-family: "adelle", serif;
   &.development {
-    border: 2px solid $primary-color;
+    border: 1px solid $primary-color;
   }
   &.ux {
-    border: 2px solid $green;
+    border: 1px solid $green;
   }
   &.product {
-    border: 2px solid $purple;
+    border: 1px solid $purple;
   }
   &.marketing {
-    border: 2px solid $orange;
+    border: 1px solid $orange;
   }
 }
 p.skills-title {

@@ -32,7 +32,7 @@
               if($(this).hasClass(options.active_class)) {
                 $link.css("border-bottom", "none")
               } else {
-                $link.css("border-bottom","2px solid #8c8c8c");
+                $link.css("border-bottom","1px solid #8c8c8c");
               }
             });
 

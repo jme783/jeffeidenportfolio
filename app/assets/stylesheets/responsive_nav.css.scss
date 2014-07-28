@@ -296,7 +296,7 @@ header.below-shelf {
 header.below-shelf {
   display: block;
   background: $black;
-  border-bottom: 1px solid $faint-gray;
+  border-bottom: 1px solid $hr-gray;
   position: fixed;
   .nav-collapse a:active, .nav-collapse .active a {
     color: $cream;

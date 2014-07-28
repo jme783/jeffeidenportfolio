@@ -50,23 +50,23 @@ ul, ol, dl {
   position: relative;
 }
 .accordion-hover {
-  border: 2px solid $faint-gray;
+  border: 1px solid $faint-gray;
   border-top: none;
   border-bottom-color: $faint-gray;
 }
 .accordion-nonhover {
-  border: 2px solid $faint-gray;
+  border: 1px solid $faint-gray;
   border-top: none;
-  border-bottom: 2px solid $faint-gray;
+  border-bottom: 1px solid $faint-gray;
 }
 .cream-border-bottom {
-  border-bottom: 2px solid $cream !important;
+  border-bottom: 1px solid $cream !important;
 }
 .gray-border-bottom {
-  border-bottom: 2px solid $faint-gray !important;
+  border-bottom: 1px solid $faint-gray !important;
 }
 .accordion dd > a {
-  border: 2px solid $faint-gray;
+  border: 1px solid $faint-gray;
   text-align: center;
   font-size: 1.1rem;
   font-weight: 100;
@@ -75,12 +75,12 @@ ul, ol, dl {
   @include transition-duration(.3s);
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   &:hover {
-    border: 2px solid $cream;
+    border: 1px solid $cream;
     border-bottom-color: $cream;
     color: $cream;
   }
   &:active {
-    border: 2px solid $cream;
+    border: 1px solid $cream;
     border-bottom-color: $cream;
     color: $cream;
   }
@@ -124,7 +124,7 @@ dd.active:before {
     font-size: 0.9rem;
   }
   .content.active {
-    border: 2px solid $faint-gray;
+    border: 1px solid $faint-gray;
     border-top: none;
   }
 }
