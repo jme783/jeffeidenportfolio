@@ -84,6 +84,9 @@ GEM
       sass (~> 3.2)
       thor
     builder (3.1.4)
+    bullet (4.13.0)
+      activesupport (>= 3.0.0)
+      uniform_notifier (>= 1.6.0)
     chunky_png (1.3.1)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -213,6 +216,7 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    uniform_notifier (1.6.2)
 
 PLATFORMS
   ruby
@@ -221,6 +225,7 @@ DEPENDENCIES
   activeadmin!
   activeadmin-dragonfly!
   activeadmin-wysihtml5!
+  bullet
   coffee-rails (~> 4.0.0)
   compass-rails
   foreman

@@ -41,6 +41,7 @@ gem "sass_rails_patch", "~> 0.0.1"
 gem 'compass-rails'
 gem 'puma'
 gem 'foreman'
+gem "bullet", :group => "development"
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
