@@ -23,6 +23,7 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
     $(window).bind "scroll", ->
        if $(window).scrollTop() == 0
          $('.top-shelf-media, .hero-text').attr('style', 'transform: translate3d(0px, 0px, 0px) scale(1) rotate(0deg); opacity: 1;')
+         $('.top-shelf-blurred').attr('style', 'transform: translate3d(0px, 0px, 0px) scale(1) rotate(0deg); opacity: 0;')
        else if $(window).scrollTop() >= self.topSection.innerHeight() - 60
          $("header").addClass("below-shelf")
        else
