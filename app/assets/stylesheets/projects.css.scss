@@ -2,6 +2,9 @@
   color: $cream;
   text-decoration: underline;
   font-weight: 400;
+  &:hover {
+    color: scale-color($cream, $lightness: -14%)
+  }
 }
 .project-showcase-image {
   max-width: 70%;

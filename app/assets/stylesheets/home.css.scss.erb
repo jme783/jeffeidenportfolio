@@ -274,6 +274,24 @@ h4.testimonial_body {
 .skill {
   margin-bottom: 3rem;
 }
+/* FOOTER */
+footer {
+  section#footer {
+    background-color: $black;
+    border-top: 1px solid $hr-gray;
+    p, a {
+      font-size: 0.9rem;
+    }
+  }
+  a {
+    color: $cream;
+    text-decoration: underline;
+    &:hover {
+      color: scale-color($cream, $lightness: -14%)
+    }
+  }
+}
+/* END FOOTER */
 @media #{$large-up} {
   margin-bottom: 0;
 }
