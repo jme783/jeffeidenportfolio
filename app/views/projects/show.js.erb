@@ -1,1 +1,1 @@
-$('.project-description').html("<%= escape_javascript(render :partial => @project.name.downcase, :project => @project) %>");
+$('.project-description').scrollTop(0).html("<%= escape_javascript(render :partial => @project.name.downcase, :project => @project) %>");
