@@ -5,5 +5,6 @@ class ProjectsController < ApplicationController
     respond_to do |format|
       format.js #renders show.js.erb
     end
+    fresh_when @project
   end
 end
