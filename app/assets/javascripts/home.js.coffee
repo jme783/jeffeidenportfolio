@@ -76,6 +76,7 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
           projectSlideout.hide()
         $(".overlay").fadeOut(200)
         $("body").css("overflow", "auto")
+        $('.project-description').html('')
 
   New::isTouchDevice = ->
     self = this

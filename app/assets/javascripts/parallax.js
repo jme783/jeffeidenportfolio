@@ -27,19 +27,19 @@
               },
               {
                 'selector'    : 'h2.hero-text',
-                'opacity'     : [1, -7] //Hack to speed up opacity change
+                'opacity'     : [1, -3] //Hack to speed up opacity change
               },
               {
-                'selector'    : '.top-shelf-blurred',
+                'selector'    : navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ? '' : '.top-shelf-blurred',
                 'translateY'  : 200,
-                'opacity'     : [0, 2]
+                'opacity'     : [0, 4]
               }
             ]
           }, {
             'duration' : '100%',
             'animations' :  []
           } 
-        ]
+        ],
 
     /*  Construction
     -------------------------------------------------- */
@@ -50,7 +50,10 @@
         $window.resize(throwError)
       } else {
         // Only do Parallax effect on non-mobile devices
-        setupValues();
+        if(!isOldIE()) {
+          // Don't do this on IE 9 and down
+          setupValues();
+        }
       }
     }
 
@@ -228,6 +231,12 @@
     isTouchDevice = function() {
       return 'ontouchstart' in window // works on most browsers 
       || 'onmsgesturechange' in window; // works on ie10
+    }
+
+    isOldIE = function() {
+      if ($('html').is('.ie6, .ie7, .ie8, .ie9')) {
+        return true
+      }
     }
 
     init();
