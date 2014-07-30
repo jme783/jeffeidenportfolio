@@ -28,6 +28,7 @@ JeffPortfolio.homePage = JeffPortfolio.homePage || {}
          $("header").addClass("below-shelf")
        else
          $("header").removeClass("below-shelf")
+         $(".nav-collapse li").removeClass("active")
 
   New::bindAccordionClick = ->
     self = this
