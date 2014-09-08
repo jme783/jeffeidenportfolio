@@ -66,8 +66,25 @@
 }
 /* END PROJECTS CSS */
 /* ABOUT ME CSS */
-p.about_me {
+p.about_me, .resume-link {
   font-size: 1.4375em;
+}
+.divider {
+  margin: 0 1em;
+  display: inline-block;
+  color: $faint-gray;
+  font-weight: 600;
+}
+
+.resume-link {
+  margin-top: 1.2em;
+  display: inline-block;
+  text-decoration: underline;
+  color: $cream;
+  font-weight: 600;
+  &:hover {
+    color: scale-color($cream, $lightness: -14%)
+  }
 }
 ul.contact-methods {
   list-style-type:  none;
@@ -405,7 +422,7 @@ footer {
       display: none;
     }
   }
-  p.about_me {
+  p.about_me, .resume-link {
     font-size: 1rem;
   }
   .project-slideout {
