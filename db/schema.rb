@@ -17,12 +17,12 @@ ActiveRecord::Schema.define(version: 20140721185548) do
   enable_extension "plpgsql"
 
   create_table "active_admin_comments", force: true do |t|
-    t.text     "namespace"
+    t.string   "namespace"
     t.text     "body"
     t.integer  "resource_id",   null: false
-    t.text     "resource_type", null: false
+    t.string   "resource_type", null: false
     t.integer  "author_id"
-    t.text     "author_type"
+    t.string   "author_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20140721185548) do
   end
 
   create_table "known_technologies", force: true do |t|
-    t.text     "name"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "skill_id"
@@ -71,20 +71,20 @@ ActiveRecord::Schema.define(version: 20140721185548) do
   end
 
   create_table "skills", force: true do |t|
-    t.text     "name"
-    t.text     "image"
+    t.string   "name"
+    t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "testimonials", force: true do |t|
-    t.text     "author_name"
-    t.text     "author_company"
-    t.text     "author_position"
+    t.string   "author_name"
+    t.string   "author_company"
+    t.string   "author_position"
     t.text     "blurb_text"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "portrait"
+    t.string   "portrait"
   end
 
 end
